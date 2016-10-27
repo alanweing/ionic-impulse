@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8d25ff4-ed9e-4f58-bad5-4ff9faf1a03a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/impulse.iml" afterPath="$PROJECT_DIR$/.idea/impulse.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
     </list>
     <ignored path="impulse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -422,12 +418,20 @@
       <workItem from="1477305571900" duration="114000" />
       <workItem from="1477334485699" duration="4350000" />
       <workItem from="1477435022630" duration="2018000" />
-      <workItem from="1477531557294" duration="1491000" />
+      <workItem from="1477531557294" duration="1519000" />
     </task>
+    <task id="LOCAL-00001" summary="commit :D">
+      <created>1477533770553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1477533770554</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16125000" />
+    <option name="totallyTimeSpent" value="16153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1360" y="335" width="1360" height="745" extended-state="6" />
@@ -462,6 +466,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit :D" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
