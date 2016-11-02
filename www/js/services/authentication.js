@@ -1,6 +1,7 @@
 var app = angular.module('impulse.services.authentication', []);
 
-app.service('AuthenticationService', function ($q, $http, $ionicPopup)
+app.service('AuthenticationService', function ($q, $http, $ionicPopup,
+                                               $localStorage, globals)
 {
   var self = {
     user: null,
@@ -10,25 +11,28 @@ app.service('AuthenticationService', function ($q, $http, $ionicPopup)
       $http({
         headers: {'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'},
         method: 'POST',
-        url: 'http://localhost:8000/impulse_api/authenticate',
+        url: globals.apiUrl + 'authenticate',
         data: param({
           'email': email,
           'password': password
         })
       })
         .then(function (response)
-      {
-        if (response.status == 200)
         {
-          // console.log(response.data['api_token']);
-          // window.localStorage.setItem('app_token', response.data['api_token']);
-          d.resolve(response.data['api_token']);
-        }
-      }, function (error)
+          if (response.status == 200)
+          {
+            // window.localStorage.setItem('app_token', response.data['api_token']);
+            //   $localStorage.name = response.data['name'];
+            $localStorage.name = response.data['name'];
+            $localStorage.email = response.data['email'];
+            $localStorage.api_token = response.data['api_token'];
+            $localStorage.imageUrl = response.data['profile_picture'];
+            d.resolve(response.data);
+          }
+        }, function (error)
         {
           if (error.status == 401)
           {
-            // console.log(401);
             $ionicPopup.alert({
               title: 'Whoops!',
               subTitle: 'E-mail e ou senha inválidos'

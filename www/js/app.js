@@ -2,8 +2,13 @@ var app = angular.module('impulse', [
   'ionic',
   'ngMessages',
   'ngCordova',
+  'ngStorage',
   'impulse.controllers.authentication',
-  'impulse.services.authentication'
+  'impulse.services.authentication',
+  'impulse.controllers.workshops',
+  'impulse.services.workshops',
+  'impulse.controllers.feedbacks',
+  'impulse.services.feedbacks'
 ]);
 
 app.run(function($ionicPlatform)
@@ -31,17 +36,48 @@ app.run(function($ionicPlatform)
 
 app.config(function ($stateProvider, $urlRouterProvider)
 {
-  $stateProvider.state('login', {
-    url: '/login',
-    cache: false,
-    controller: 'LoginController',
-    templateUrl: 'templates/login.html',
-    data: {
-      requiresLogin: false
-    }
-  });
+  $stateProvider
+    .state('login', {
+      url: '/login',
+      cache: false,
+      controller: 'LoginController',
+      templateUrl: 'templates/login.html',
+      data: {
+        requiresLogin: false
+      }
+    })
+    .state('home', {
+      url: '/home',
+      // controller: 'WorkshopsController',
+      templateUrl: 'templates/home.html',
+      abstract: true,
+      data: {
+        requiresLogin: true
+      }})
+    .state('home.workshops', {
+      url: '/workshops',
+      views: {
+        'tab-workshops': {
+          templateUrl: 'templates/home/tab-workshops.html',
+          controller: 'WorkshopsController'
+        }
+      }
+    })
+    .state('home.feedbacks', {
+      url: '/feedbacks',
+      views: {
+        'tab-feedbacks': {
+          templateUrl: 'templates/home/tab-feedbacks.html',
+          controller: 'FeedbacksController'
+        }
+      }
+    });
 
   $urlRouterProvider.otherwise('/login');
 
 });
 
+app.constant('globals', {
+  'siteUrl': 'http://localhost:8000/',
+  'apiUrl': 'http://localhost:8000/impulse_api/'
+});

@@ -1,16 +1,18 @@
 var app = angular.module('impulse.controllers.authentication', []);
 
-app.controller('LoginController', function ($scope, $state, AuthenticationService)
+app.controller('LoginController', function ($scope, $state, $window,
+                                            AuthenticationService, $localStorage)
 {
   $scope.login = function (form)
   {
-    // console.log(form);
-    // return;
     if (form.$valid)
     {
-      AuthenticationService.login($scope.formData.email, $scope.formData.password).then(function (response) {
+      AuthenticationService.login($scope.formData.email, $scope.formData.password).then(function (response)
+      {
         console.log(response);
-      }, function (error) {
+        $state.go("home.workshops");
+      }, function (error)
+      {
         console.log(error);
       });
     }
@@ -18,5 +20,16 @@ app.controller('LoginController', function ($scope, $state, AuthenticationServic
     {
       console.log('invalid form!!');
     }
-  }
+  };
+
+  var init = function()
+  {
+    if ($localStorage.api_token != null)
+    {
+      $state.go("home.workshops");
+    }
+  };
+
+  init();
+
 });
