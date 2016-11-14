@@ -1,0 +1,41 @@
+<ion-view>
+
+  <ion-nav-title>
+    <img src="img/impulse.png" height="100%">
+  </ion-nav-title>
+
+  <ion-nav-buttons>
+    <button class="button button-icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content style="background:#31B2EA;padding-top:5px;">
+
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="refreshWorkshops()">
+    </ion-refresher>
+
+    <!-- <div class="list card" ng-repeat="workshop in workshops.workshops">
+        <div class="item item-avatar">
+            <img src="img/impulse.png" height="100%">
+            <h2>{{workshop.title}}</h2>
+        </div>
+        <div class="item item-body">
+            <p>
+                {{workshop.description}}
+            </p>
+        </div>
+    </div> -->
+
+    <!-- <div class="row"> -->
+
+    <div class="col col-33 impulse-card"
+         ng-repeat="workshop in workshops.workshops">
+      <h5>{{workshop.title}}</h5>
+    </div>
+
+    <!-- </div> -->
+
+  </ion-content>
+
+</ion-view>

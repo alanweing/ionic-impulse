@@ -32,16 +32,58 @@
   <script src="js/controllers/feedbacks.js"></script>
   <script src="js/services/feedbacks.js" ></script>
 
+  <script src="js/controllers/sidemenu.js"></script>
+  <script src="js/controllers/workshop.js"></script>
+  <script src="js/controllers/group.js"></script>
+  <script src="js/controllers/participants.js"></script>
+  <script src="js/controllers/evaluations.js"></script>
+  <script src="js/services/api.js" ></script>
+
 </head>
 <body ng-app="impulse">
 
-<!-- <ion-header> -->
-<ion-nav-bar class="bar bar-header bar-positive has-tabs-top">
-  <ion-nav-back-button></ion-nav-back-button>
-</ion-nav-bar>
-<!-- </ion-header> -->
+  <ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu side="left" ng-controller="SideMenuController" style="background: #00AAE7">
+      <ion-content>
+        <ion-list class="side-menu">
+          <ion-item menu-close
+                    ng-click="goToFeedbacks()"
+                    ng-if="role==1">
+            <i class="icon ion-ios-paper"> Feedbacks</i>
+          </ion-item>
+          <ion-item menu-close
+                    ng-click="goToGroup()"
+                    ng-if="role==1">
+            <i class="icon ion-ios-people"> Grupo</i>
+          </ion-item>
+          <ion-item menu-close
+                    ng-click="goToMyEvaluations()"
+                    ng-if="role!=1">
+            <i class="icon ion-clipboard"> Minhas Avaliações</i>
+          </ion-item>
+          <ion-item menu-close
+                    ng-click="goToGroups()"
+                    ng-if="role!=1">
+            <i class="icon ion-ios-people"> Grupos</i>
+          </ion-item>
+          <ion-item menu-close ng-click="debug()">
+            <i class="icon ion-code-working"> Debug</i>
+          </ion-item>
+          <ion-item menu-close ng-click="logout()">
+            <i class="icon ion-android-exit"> Sair</i>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
 
-<ion-nav-view></ion-nav-view>
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar bar-header bar-light" align-title="center">
+        <ion-nav-back-button></ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+
+  </ion-side-menus>
 
 </body>
 </html>

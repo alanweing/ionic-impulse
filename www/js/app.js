@@ -8,7 +8,13 @@ var app = angular.module('impulse', [
   'impulse.controllers.workshops',
   'impulse.services.workshops',
   'impulse.controllers.feedbacks',
-  'impulse.services.feedbacks'
+  'impulse.services.feedbacks',
+  'impulse.services.api',
+  'impulse.controllers.sidemenu',
+  'impulse.controllers.workshop',
+  'impulse.controllers.group',
+  'impulse.controllers.participants',
+  'impulse.controllers.evaluations'
 ]);
 
 app.run(function($ionicPlatform)
@@ -20,15 +26,9 @@ app.run(function($ionicPlatform)
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
-      // cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    if(window.StatusBar)
-    {
+    if(window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
@@ -40,7 +40,7 @@ app.config(function ($stateProvider, $urlRouterProvider)
     .state('login', {
       url: '/login',
       cache: false,
-      controller: 'LoginController',
+      // controller: 'LoginController',
       templateUrl: 'templates/login.html',
       data: {
         requiresLogin: false
@@ -48,30 +48,55 @@ app.config(function ($stateProvider, $urlRouterProvider)
     })
     .state('home', {
       url: '/home',
-      // controller: 'WorkshopsController',
+      controller: 'WorkshopsController',
       templateUrl: 'templates/home.html',
-      abstract: true,
       data: {
         requiresLogin: true
       }})
-    .state('home.workshops', {
-      url: '/workshops',
-      views: {
-        'tab-workshops': {
-          templateUrl: 'templates/home/tab-workshops.html',
-          controller: 'WorkshopsController'
-        }
-      }
+    .state('workshop', {
+      url: '/workshop/:id',
+      templateUrl: 'templates/workshop.html',
+      controller: 'WorkshopController'
     })
-    .state('home.feedbacks', {
+    .state('competences', {
+      url: '/workshop/competences',
+      templateUrl: 'templates/workshops/competences.html',
+      controller: 'WorkshopController'
+    })
+    .state('group', {
+      url: '/group',
+      templateUrl: 'templates/group.html',
+      controller: 'GroupController'
+    })
+    .state('feedbacks', {
       url: '/feedbacks',
-      views: {
-        'tab-feedbacks': {
-          templateUrl: 'templates/home/tab-feedbacks.html',
-          controller: 'FeedbacksController'
-        }
-      }
-    });
+      templateUrl: 'templates/feedbacks.html',
+      controller: 'FeedbacksController'
+    })
+    .state('detailedFeedbacks', {
+      url: '/detailedFeedbacks',
+      templateUrl: 'templates/detailed-feedbacks.html',
+      controller: 'FeedbacksController'
+    })
+    .state('workshopEvaluators', {
+      url: '/workshopEvaluators',
+      templateUrl: 'templates/workshop-evaluator.html',
+      controller: 'WorkshopController'
+    })
+    .state('participants', {
+      url: '/participants',
+      templateUrl: 'templates/participants.html',
+      controller: 'ParticipantsController'
+    }).state('groups', {
+      url: '/groups',
+      templateUrl: 'templates/groups.html',
+      controller: 'GroupController'
+    })
+    .state('myEvaluations', {
+      url: 'myEvaluations',
+      templateUrl: 'templates/myEvaluations.html',
+      controller: 'EvaluationsController'
+  });
 
   $urlRouterProvider.otherwise('/login');
 

@@ -1,23 +1,33 @@
-<!-- <ion-view hide-back-button="true">
+<ion-view hide-back-button="true">
+  <ion-nav-buttons side="left" menu-toggle="left">
+    <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <div class="item-avatar">
+      <img ng-src="{{ profilePicture }}" class="impulse-avatar">
+    </div>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <img src="img/impulse.png" height="90%" style="margin-top: 2px;">
+  </ion-nav-title>
 
-    <ion-content>
-        asiuodhiaushdiuashd
-    </ion-content>
+  <ion-content style="background:#31B2EA;">
 
-</ion-view> --> -->
-<ion-tabs class="tabs-background-positive tabs-striped tabs-top tabs-color-light">
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="workshops.refresh()">
+    </ion-refresher>
+    <!--ng-class="workshops.workshops.length % 3 > 0 ? 'last-element' : 'impulse-card'"-->
+    <div class="col col-33 impulse-card"
+         ng-repeat="workshop in workshops.workshops"
+         ng-class="{'home-last-element': (workshops.workshops.length % 3 > 0 && $last)}"
+         ui-sref="competences"
+         ng-click="workshops.setCurrentWorkshop(workshop)">
+      <img ng-src="img/workshops/icons/{{ workshop['workshop'].icon }}"/>
+      <h5>{{workshop['workshop'].title}}</h5>
+    </div>
 
-  <ion-tab title="Oficinas"
-           ui-sref="home.workshops">
-    <ion-nav-view name="tab-workshops">
-    </ion-nav-view>
+  </ion-content>
 
-  </ion-tab>
+</ion-view>
 
-  <ion-tab title="Feedbacks"
-           ui-sref="home.feedbacks">
-    <ion-nav-view name="tab-feedbacks"></ion-nav-view>
-
-  </ion-tab>
-
-</ion-tabs>

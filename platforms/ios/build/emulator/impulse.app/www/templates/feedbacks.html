@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-nav-title>
+    Feedbacks
+  </ion-nav-title>
+  <ion-content ng-init="get()">
+    <div class="">
+      <div class="feedback-item" ng-repeat="feedback in feedbacks"
+           ng-click="setCurrentWorkshop(feedback)">
+        <div class="img-background">
+          <img ng-src="img/workshops/icons/{{ feedback.icon }}">
+        </div>
+        <h2>{{ feedback[0].description }}</h2>
+        <p>{{ feedback[0].author }}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

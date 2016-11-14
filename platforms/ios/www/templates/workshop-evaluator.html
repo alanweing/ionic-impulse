@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-title>
+    Avaliadores
+  </ion-nav-title>
+  <ion-content style="background:#31B2EA">
+    <div class="workshop-evaluator-header">
+      <img ng-src="img/workshops/icons/{{ workshop['workshop'].icon }}">
+      <h2 class="block-text">{{ workshop['workshop'].title }}</h2>
+    </div>
+    <div class="workshop-evaluator"
+         ng-repeat="evaluator in workshop['evaluators']">
+      <img ng-src="{{ evaluator.profile_picture }}">
+      <h2 class="block-text">{{ evaluator.name }}</h2>
+    </div>
+  </ion-content>
+</ion-view>

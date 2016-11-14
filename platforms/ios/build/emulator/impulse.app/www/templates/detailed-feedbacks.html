@@ -1,0 +1,18 @@
+<ion-view>
+  <ion-nav-title>
+
+  </ion-nav-title>
+  <ion-content style="background:#31B2EA">
+    <div class="feedback-description-header">
+      <h2>FEEDBACKS</h2>
+      <img ng-src="img/workshops/icons/{{ model.currentWorkshopFeedback.icon }}">
+    </div>
+    <div style="clear: both"></div>
+    <div class="feedback-description"
+         ng-repeat="feedback in model.currentWorkshopFeedback">
+      <h2>{{ feedback.description }}</h2>
+      <p>{{ feedback.author }}</p>
+      <p>{{ feedback.created_at }}</p>
+    </div>
+  </ion-content>
+</ion-view>

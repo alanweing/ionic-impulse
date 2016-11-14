@@ -1,0 +1,46 @@
+<ion-view hide-back-button="true"
+          hide-nav-bar="true">
+  <ion-content ng-controller="LoginController"
+               padding="true"
+               scroll="false"
+               class="row row-center">
+    <form ng-submit="login(loginForm)"
+          name="loginForm"
+          class="col col-center">
+      <ion-list class="card">
+        <label class="item item-input item-floating-label"
+               ng-class="{'has-error':loginForm.email.$invalid}">
+          <input type="email"
+                 placeholder="E-mail"
+                 ng-model="formData.email"
+                 ng-required="true"
+                 name="email">
+        </label>
+
+        <div class="form-errors"
+             ng-messages="loginForm.email.$error">
+          <div ng-messages-include="templates/form-errors.html"></div>
+        </div>
+
+        <label class="item item-input item-floating-label" ng-class="{'has-error':loginForm.password.$invalid}">
+          <input type="password"
+                 placeholder="Senha"
+                 ng-model="formData.password"
+                 ng-required="true"
+                 name="password"
+                 ng-minlength="6">
+        </label>
+
+        <div class="form-errors"
+             ng-messages="loginForm.password.$error">
+          <div ng-messages-include="templates/form-errors.html"></div>
+          <div class="form-error"
+               ng-message="minlength">A senha contém no mínimo 6 caracteres</div>
+        </div>
+
+        <button type="submit" class="button button-positive col" style="margin-top:20px;">Login</button>
+
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-view>

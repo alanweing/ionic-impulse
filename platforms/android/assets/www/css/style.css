@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+.impulse-card {
+
+  float: left;
+  background: #00AAE7;
+  text-align: center;
+  color: #FFF;
+  outline: 5px solid #31B2EA;
+  height: 150px;
+
+}
+
+.impulse-card:last-child {
+
+  margin-left: 33%;
+  margin-right: 33%;
+  border-top: 5px solid #31B2EA;
+  outline: inherit;
+
+}
+
+.impulse-card h5 {
+
+  color: #FFF;
+
+}

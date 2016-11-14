@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-nav-title>
+    Minhas Avaliações
+  </ion-nav-title>
+  <ion-content style="background:#47B3C0">
+    <div class="evaluation-container">
+      <h2>Participantes</h2>
+      <div class="evaluation-content" ng-repeat="evaluation in evaluations.users">
+        <span class="highlight">{{ evaluation.score }} pontos</span> para
+        <span class="highlight">{{ evaluation.name }}</span> na oficina
+        <span class="highlight">{{ evaluation.workshop }}</span>
+      </div>
+      <h2>Grupos</h2>
+      <div class="evaluation-content" ng-repeat="evaluation in evaluations.groups">
+        <span class="highlight">{{ evaluation.score }} pontos</span> para o
+        <span class="highlight">{{ evaluation.name }}</span> na oficina
+        <span class="highlight">{{ evaluation.workshop }}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

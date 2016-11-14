@@ -1,0 +1,13 @@
+<ion-view hide-back-button="false">
+  <ion-nav-title>
+    Grupo
+  </ion-nav-title>
+  <ion-content style="background:#D9007B;padding-top:10px">
+    <div class="">
+      <div class="group-item" ng-repeat="user in groupUsers">
+        <img ng-src="{{ user.imageUrl }}">
+        <h2>{{ user.name }}</h2>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

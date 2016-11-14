@@ -1,16 +1,25 @@
 var app = angular.module('impulse.controllers.workshops', []);
 
-app.controller('WorkshopsController', function ($scope, $state, WorkshopsService)
+app.controller('WorkshopsController', function ($scope, $state, WorkshopsService, $ionicSideMenuDelegate, $localStorage)
 {
   $scope.workshops = WorkshopsService;
-  // $scope.workshops.getWorkshops();
+  $scope.role = $localStorage.role;
+  $scope.profilePicture = $localStorage.imageUrl;
 
-  // $scope.getWorkshops = function()
-  // {
-  //     WorkshopsService.getWorkshops().then(function(response){
-  //
-  //     }, function(error){
-  //
-  //     });
-  // }
+  $scope.refresh = function()
+  {
+    if (!$scope.workshops.isLoading) {
+      $scope.workshops.refresh().then(function ()
+      {
+        $scope.$broadcast('scroll.refreshComplete');
+      });
+    }
+    $scope.role = $localStorage.role;
+  };
+
+  if ($localStorage.api_token != undefined)
+  {
+    $scope.refresh();
+  }
+
 });

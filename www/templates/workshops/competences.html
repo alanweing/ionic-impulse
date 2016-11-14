@@ -1,0 +1,36 @@
+<ion-view>
+  <ion-content style="background:#2BA7E4">
+    <div style="margin-top:10px;padding:20px;">
+      <div style="float:left;width:30%;">
+        <img ng-src="img/workshops/icons/{{ workshop['workshop'].icon }}" style="width: 100%">
+      </div>
+      <div style="float:left;width:60%;margin-left:25px;'">
+        <h1 class="workshop" style="font-size:6vw;">{{ workshop['workshop'].title }}</h1>
+        <h4 class="workshop" style="font-size:4vw">Início: {{ workshop['schedule'].start.slice(11, 16) + 'h'}}</h4>
+        <h4 class="workshop" style="font-size:4vw">Fim: {{ workshop['schedule'].end.slice(11, 16) + 'h'}}</h4>
+      </div>
+      <div class="workshop"
+           style="clear: both;padding-top:30px"
+           ng-if="role==1">
+        <button ui-sref="workshopEvaluators">Avaliadores</button>
+        <button ui-sref="group" style="position:absolute;right:0;margin-right:20px;">Grupo</button>
+        <div class="btn-check-in">CHECK-IN</div>
+      </div>
+      <div ng-if="role!=1"
+           style="clear:both;"
+           class="workshops-evaluator">
+        <div class="workshop-evaluator-button"
+             style="background: #46B0BE;"
+             ui-sref="participants">
+          <i class="icon ion-android-person"></i>
+          <h2>PARTICIPANTES</h2>
+        </div>
+        <div class="workshop-evaluator-button"
+             style="background: #F5C62A;">
+          <i class="icon ion-ios-people" style="margin-left: 24%"></i>
+          <h2>GRUPOS</h2>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
