@@ -14,7 +14,9 @@ var app = angular.module('impulse', [
   'impulse.controllers.workshop',
   'impulse.controllers.group',
   'impulse.controllers.participants',
-  'impulse.controllers.evaluations'
+  'impulse.controllers.evaluations',
+  'impulse.controllers.score',
+  'impulse.controllers.ranking'
 ]);
 
 app.run(function($ionicPlatform)
@@ -96,7 +98,17 @@ app.config(function ($stateProvider, $urlRouterProvider)
       url: 'myEvaluations',
       templateUrl: 'templates/myEvaluations.html',
       controller: 'EvaluationsController'
-  });
+  })
+    .state('score', {
+      url: '/score',
+      templateUrl: 'templates/myScore.html',
+      controller: 'ScoreController'
+    })
+    .state('ranking', {
+      url: '/ranking',
+      templateUrl: 'templates/ranking.html',
+      controller: 'RankingController'
+    });
 
   $urlRouterProvider.otherwise('/login');
 

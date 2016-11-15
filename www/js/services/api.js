@@ -110,7 +110,7 @@ app.service('ApiService', function ($q, $http, globals, $ionicPopup, $localStora
                 self.unauthorized(error)
               }
             }
-            d.reject(error.status);
+            d.reject(error);
           }).finally(function ()
         {
           self.isLoading = false;

@@ -44,8 +44,8 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
           ApiService.request('POST', 'addScoreToGroup', {
             score: res,
             group_id: groupId,
-            workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: false
           });
         }
       });
@@ -64,8 +64,8 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
           ApiService.request('POST', 'addScoreToGroup', {
             score: score,
             group_id: groupId,
-            workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: true
           });
         }
       });

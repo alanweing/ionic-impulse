@@ -18,13 +18,36 @@
       on-refresh="workshops.refresh()">
     </ion-refresher>
     <!--ng-class="workshops.workshops.length % 3 > 0 ? 'last-element' : 'impulse-card'"-->
-    <div class="col col-33 impulse-card"
-         ng-repeat="workshop in workshops.workshops"
-         ng-class="{'home-last-element': (workshops.workshops.length % 3 > 0 && $last)}"
-         ui-sref="competences"
-         ng-click="workshops.setCurrentWorkshop(workshop)">
-      <img ng-src="img/workshops/icons/{{ workshop['workshop'].icon }}"/>
-      <h5>{{workshop['workshop'].title}}</h5>
+    <div>
+
+      <div class="col col-33 impulse-card"
+           ng-repeat="workshop in workshops.workshops"
+           ng-class="{'home-last-element': (workshops.workshops.length % 3 > 0 && $last)}"
+           ui-sref="competences"
+           ng-click="workshops.setCurrentWorkshop(workshop)"
+           ng-if="role==1">
+        <img ng-src="img/workshops/icons/{{ workshop['workshop'].icon }}"/>
+        <h5>{{workshop['workshop'].title}}</h5>
+      </div>
+
+      <div class="col col-33 impulse-card"
+           ng-repeat="workshop in workshops.workshops.workshops"
+           ng-class="{'home-last-element': (workshops.workshops.workshops.length % 3 > 0 && $last)}"
+           ui-sref="competences"
+           ng-click="workshops.setCurrentWorkshop(workshop)"
+           ng-if="role!=1">
+        <img ng-src="img/workshops/icons/{{ workshop.workshop.icon }}"/>
+        <h5>{{workshop.workshop.title}}</h5>
+      </div>
+
+    </div>
+
+    <div ng-if="role!=1 && workshops.workshops.actual != null"
+         class="home-evaluator-footer">
+      <h2>Próxima oficina:</h2>
+      <h3 style="display: block">{{ workshops.workshops.actual.workshop.title }}</h3>
+      <h4>Inicio: {{ workshops.workshops.actual.schedule.start.slice(11, 16) + 'h' }}</h4>
+      <h4>Fim: {{ workshops.workshops.actual.schedule.end.slice(11, 16) + 'h' }}</h4>
     </div>
 
   </ion-content>

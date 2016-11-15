@@ -2,7 +2,13 @@
   <ion-nav-title>
     Feedbacks
   </ion-nav-title>
-  <ion-content ng-init="get()">
+  <ion-content ng-init="refresh()">
+
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="refresh()">
+    </ion-refresher>
+
     <div class="">
       <div class="feedback-item" ng-repeat="feedback in feedbacks"
            ng-click="setCurrentWorkshop(feedback)">

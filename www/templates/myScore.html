@@ -1,0 +1,33 @@
+<ion-view>
+  <ion-nav-title>
+    Minha Pontuação
+  </ion-nav-title>
+  <ion-content style="background: #47B3C1">
+
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="refresh()">
+    </ion-refresher>
+
+    <div style="padding:20px;">
+      <div class="score-card"
+           ng-repeat="(workshop, data) in scores" style="clear:both;padding:20px 0;">
+        <hr>
+        <div style="margin-top: 30px">
+          <img ng-src="img/workshops/icons/{{data[0].workshop.icon}}">
+          <h1 class="score-title">{{ workshop }}</h1>
+        </div>
+        <div ng-repeat="score in data"
+             style="clear:both;" ng-class="{'extra': score.score.score_extra > 0}">
+          <i class="icon ion-ios-star"></i>
+          <h2>{{ score.score.score }}</h2>
+          <h4>{{ score.score.author }}</h4>
+        </div>
+      </div>
+      <div class="score-footer">
+        <h2>TOTAL:</h2>
+        <h4>{{ total }} pontos</h4>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

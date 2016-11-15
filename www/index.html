@@ -37,6 +37,8 @@
   <script src="js/controllers/group.js"></script>
   <script src="js/controllers/participants.js"></script>
   <script src="js/controllers/evaluations.js"></script>
+  <script src="js/controllers/score.js"></script>
+  <script src="js/controllers/ranking.js"></script>
   <script src="js/services/api.js" ></script>
 
 </head>
@@ -52,6 +54,11 @@
             <i class="icon ion-ios-paper"> Feedbacks</i>
           </ion-item>
           <ion-item menu-close
+                    ng-click="goToScore()"
+                    ng-if="role==1">
+            <i class="icon ion-ribbon-a"> Pontuação</i>
+          </ion-item>
+          <ion-item menu-close
                     ng-click="goToGroup()"
                     ng-if="role==1">
             <i class="icon ion-ios-people"> Grupo</i>
@@ -60,6 +67,11 @@
                     ng-click="goToMyEvaluations()"
                     ng-if="role!=1">
             <i class="icon ion-clipboard"> Minhas Avaliações</i>
+          </ion-item>
+          <ion-item menu-close
+                    ng-click="goToRanking()"
+                    ng-if="role!=1">
+            <i class="icon ion-podium"> Ranking</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToGroups()"

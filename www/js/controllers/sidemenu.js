@@ -31,6 +31,11 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
     console.log($localStorage);
   };
 
+  $scope.goToRanking = function ()
+  {
+    $state.go('ranking');
+  };
+
   $scope.goToGroup = function ()
   {
     $state.go('group');
@@ -39,6 +44,11 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
   $scope.goToFeedbacks = function ()
   {
     $state.go('feedbacks');
+  };
+
+  $scope.goToScore = function ()
+  {
+    $state.go('score');
   };
 
   $scope.goToGroups = function ()

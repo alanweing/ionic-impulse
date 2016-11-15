@@ -6,15 +6,18 @@
       </div>
       <div style="float:left;width:60%;margin-left:25px;'">
         <h1 class="workshop" style="font-size:6vw;">{{ workshop['workshop'].title }}</h1>
-        <h4 class="workshop" style="font-size:4vw">Início: {{ workshop['schedule'].start.slice(11, 16) + 'h'}}</h4>
-        <h4 class="workshop" style="font-size:4vw">Fim: {{ workshop['schedule'].end.slice(11, 16) + 'h'}}</h4>
+        <h4 class="workshop" style="font-size:4vw" ng-if="role==1">Início: {{ workshop.schedule.start.slice(11, 16) + 'h'}}</h4>
+        <h4 class="workshop" style="font-size:4vw" ng-if="role==1">Fim: {{ workshop.schedule.end.slice(11, 16) + 'h'}}</h4>
+
+        <h4 class="workshop" style="font-size:4vw" ng-if="role!=1">Início: {{ workshop['schedules'][0].start.slice(11, 16) + 'h'}}</h4>
+        <h4 class="workshop" style="font-size:4vw" ng-if="role!=1">Fim: {{ workshop['schedules'][0].end.slice(11, 16) + 'h'}}</h4>
       </div>
       <div class="workshop"
            style="clear: both;padding-top:30px"
            ng-if="role==1">
         <button ui-sref="workshopEvaluators">Avaliadores</button>
         <button ui-sref="group" style="position:absolute;right:0;margin-right:20px;">Grupo</button>
-        <div class="btn-check-in">CHECK-IN</div>
+        <div class="btn-check-in" ng-click="checkIn()" ng-class="{'disabled': !workshop.can_check_in}">CHECK-IN</div>
       </div>
       <div ng-if="role!=1"
            style="clear:both;"
@@ -26,7 +29,8 @@
           <h2>PARTICIPANTES</h2>
         </div>
         <div class="workshop-evaluator-button"
-             style="background: #F5C62A;">
+             style="background: #F5C62A;"
+             ui-sref="groups">
           <i class="icon ion-ios-people" style="margin-left: 24%"></i>
           <h2>GRUPOS</h2>
         </div>

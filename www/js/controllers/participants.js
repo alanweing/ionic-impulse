@@ -22,7 +22,8 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             score: points,
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: true
           });
         }
       });
@@ -43,7 +44,8 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             score: res,
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: false
           });
         }
       });
