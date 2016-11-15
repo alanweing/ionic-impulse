@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-nav-title>
+    Participantes
+  </ion-nav-title>
+  <ion-content class="participants">
+    <div>
+      <div class="participant-card"
+           ng-repeat="participant in users">
+        <img ng-src="{{ participant.profile_picture }}">
+        <h2 class="block-text">{{ participant['user'].name }}</h2>
+        <div class="participant-buttons">
+          <div class="participant-button" style="background:#7F7F7F;"
+               ng-click="addPointsToUser(null, participant['user'].id, 'prompt')">
+            Avaliar
+          </div>
+          <div class="participant-button"
+               style="background:#CC91FD;"
+               ng-click="addPointsToUser(5, participant['user'].id, 'confirm')">
+            +5
+          </div>
+          <div class="participant-button" style="background:#41CF9A"
+               ng-click="addFeedbackToUser(participant['user'].id)">
+            <i class="icon ion-ios-chatbubble"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -42,14 +42,20 @@ app.service('ApiService', function ($q, $http, globals, $ionicPopup, $localStora
           }
           else if (response.status == 401)
           {
-            self.unauthorized(response);
+            if (url != 'validateToken')
+            {
+              self.unauthorized(response);
+            }
           }
           d.reject(response);
         }, function (error)
         {
           if (error.status == 401)
           {
-            self.unauthorized(error);
+            if (url != 'validateToken')
+            {
+              self.unauthorized(error);
+            }
           }
           d.reject(error);
         }).finally(function ()
@@ -85,8 +91,8 @@ app.service('ApiService', function ($q, $http, globals, $ionicPopup, $localStora
                 $localStorage.imageUrl = response.data['profile_picture'];
                 $localStorage.role = response.data['role'];
               }
-              d.resolve(response.data);
             }
+            d.resolve(response.data);
           }, function (error)
           {
             if (error.status == 401)
@@ -104,7 +110,7 @@ app.service('ApiService', function ($q, $http, globals, $ionicPopup, $localStora
                 self.unauthorized(error)
               }
             }
-            d.reject(error.status);
+            d.reject(error);
           }).finally(function ()
         {
           self.isLoading = false;

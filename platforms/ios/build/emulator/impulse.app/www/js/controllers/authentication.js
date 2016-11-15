@@ -1,6 +1,6 @@
 var app = angular.module('impulse.controllers.authentication', []);
 
-app.controller('LoginController', function ($scope, $state, $window,
+app.controller('LoginController', function ($scope, $state, $window, $ionicHistory,
                                             AuthenticationService, $localStorage, ApiService, WorkshopsService)
 {
   $scope.login = function (form)
@@ -13,16 +13,11 @@ app.controller('LoginController', function ($scope, $state, $window,
         password:  $scope.formData.password
       }).then(function (response)
       {
-        $state.go('home');
+        $state.go('home', {}, {reload:true});
       }, function (error)
       {
 
       });
-      // AuthenticationService.login($scope.formData.email, $scope.formData.password).then(function (response) {
-      //   $state.go("home.workshops");
-      // }, function (error) {
-      //   console.log('ERROR: ' + error);
-      // });
     }
     else
     {
@@ -36,11 +31,15 @@ app.controller('LoginController', function ($scope, $state, $window,
     {
       ApiService.request('GET', 'validateToken').then(function(response)
       {
-        $state.go('home');
+        $state.go('home', {}, {reload:true});
       }, function(error)
       {
-
+        // reset();
       });
+    }
+    else
+    {
+      // reset();
     }
   };
 

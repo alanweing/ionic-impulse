@@ -23,11 +23,8 @@ app.service('WorkshopsService', function($q, $http, $localStorage, globals, ApiS
       var d = $q.defer();
       ApiService.request('GET', 'workshop').then(function (response)
       {
-        if (response.length > 0)
-        {
-          self.workshops = response;
-          console.log(response);
-        }
+        self.workshops = response;
+        // console.log(response);
         d.resolve();
       }, function (error)
       {
@@ -41,7 +38,5 @@ app.service('WorkshopsService', function($q, $http, $localStorage, globals, ApiS
       return d.promise;
     }
   };
-
-  self.get();
   return self;
 });

@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-nav-title>
+    Grupos
+  </ion-nav-title>
+  <ion-content style="background:#F5C62A;padding-top:30px;">
+    <div class="groups-card"
+         ng-repeat="group in groups">
+      <div class="group-color" style="background:{{ group.group.color }};"></div>
+      <h2 class="block-text">{{ group.group.name }}</h2>
+      <h3>{{ group.users }} participantes</h3>
+      <div class="buttons">
+        <div class="groups-button"
+             style="background:#7F7F7F"
+             ng-click="addScoreToGroup(null, group.group.id, 'prompt')">
+          Avaliar
+        </div>
+        <div class="groups-button"
+             style="background:#CC91FD"
+             ng-click="addScoreToGroup(5, group.group.id, 'confirm')">
+          +5
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,11 +1,11 @@
 var app = angular.module('impulse.services.workshops', []);
 
-app.service('WorkshopsService', function($q, $http, $localStorage, globals)
+app.service('WorkshopsService', function($q, $http, $localStorage, globals, ApiService, $ionicPopup)
 {
   var self = {
 
     'workshops': [],
-    'isLoading': false,
+    'actualWorkshop': null,
 
     'refresh': function() {
       self.isLoading = true;
@@ -13,43 +13,30 @@ app.service('WorkshopsService', function($q, $http, $localStorage, globals)
       return self.get();
     },
 
-    'get': function () {
-      self.isLoading = true;
+    'setCurrentWorkshop': function (workshop)
+    {
+      self.actualWorkshop = workshop;
+    },
+
+    'get': function ()
+    {
       var d = $q.defer();
-      $http({
-        headers: {
-          'Authorization': 'Bearer ' + $localStorage.api_token
-        },
-        method: 'GET',
-        url: globals.apiUrl + 'workshop'
-      }).then(function(response){
-        if (response.status == 200)
-        {
-          if (response.data.length > 0)
-          {
-            // angular.forEach(response.data, function (workshop)
-            // {
-            //     self.workshops.push(workshop);
-            // });
-            self.workshops = response.data;
-            console.log(self.workshops);
-          }
-          console.log(response.data);
-          // d.resolve(response.data);
-          d.resolve();
-        }
-        d.reject();
-      }, function(error){
-        console.log(error);
-        d.reject();
-      }).finally(function()
+      ApiService.request('GET', 'workshop').then(function (response)
       {
-        self.isLoading = false
+        self.workshops = response;
+        // console.log(response);
+        d.resolve();
+      }, function (error)
+      {
+        $ionicPopup.alert(
+          {
+            title: 'Whoops!',
+            subTitle: 'Algo deu errado :('
+          });
+        d.reject();
       });
       return d.promise;
     }
   };
-
-  self.get();
   return self;
 });

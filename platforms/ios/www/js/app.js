@@ -13,7 +13,10 @@ var app = angular.module('impulse', [
   'impulse.controllers.sidemenu',
   'impulse.controllers.workshop',
   'impulse.controllers.group',
-  'impulse.controllers.participants'
+  'impulse.controllers.participants',
+  'impulse.controllers.evaluations',
+  'impulse.controllers.score',
+  'impulse.controllers.ranking'
 ]);
 
 app.run(function($ionicPlatform)
@@ -90,6 +93,21 @@ app.config(function ($stateProvider, $urlRouterProvider)
       url: '/groups',
       templateUrl: 'templates/groups.html',
       controller: 'GroupController'
+    })
+    .state('myEvaluations', {
+      url: 'myEvaluations',
+      templateUrl: 'templates/myEvaluations.html',
+      controller: 'EvaluationsController'
+  })
+    .state('score', {
+      url: '/score',
+      templateUrl: 'templates/myScore.html',
+      controller: 'ScoreController'
+    })
+    .state('ranking', {
+      url: '/ranking',
+      templateUrl: 'templates/ranking.html',
+      controller: 'RankingController'
     });
 
   $urlRouterProvider.otherwise('/login');
@@ -97,6 +115,6 @@ app.config(function ($stateProvider, $urlRouterProvider)
 });
 
 app.constant('globals', {
-  'siteUrl': 'http://localhost:8000/',
-  'apiUrl': 'http://localhost:8000/impulse_api/'
+  'siteUrl': 'http://impulsecareers.com.br/',
+  'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
 });

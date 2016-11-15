@@ -1,6 +1,8 @@
 var app = angular.module('impulse.controllers.workshops', []);
 
-app.controller('WorkshopsController', function ($scope, $state, WorkshopsService, $ionicSideMenuDelegate, $localStorage)
+app.controller('WorkshopsController', function ($scope, $state, WorkshopsService,
+                                                $ionicSideMenuDelegate, $localStorage,
+                                                $ionicPopup)
 {
   $scope.workshops = WorkshopsService;
   $scope.role = $localStorage.role;
@@ -14,12 +16,16 @@ app.controller('WorkshopsController', function ($scope, $state, WorkshopsService
         $scope.$broadcast('scroll.refreshComplete');
       });
     }
+    $scope.role = $localStorage.role;
   };
 
-  $scope.toggleLeftMenu = function ()
+  if ($localStorage.api_token != undefined)
   {
-    $ionicSideMenuDelegate.toggleLeft();
-  };
+    $scope.refresh();
+  }
 
+  $ionicPopup.alert({
+    subTitle: 'Puxe para baixo para atualizar as informações.'
+  });
 
 });

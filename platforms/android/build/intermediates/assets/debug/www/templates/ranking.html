@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-nav-title>Ranking</ion-nav-title>
+  <ion-content style="background: #31B2EA; padding: 20px">
+
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="refresh()">
+    </ion-refresher>
+
+    <div ng-repeat="obj in users" style="margin:10px;">
+      <h4>{{ obj.user.name }}: <span style="text-decoration:underline;font-weight:bold">{{ obj.score }}</span> pontos</h4>
+      <hr style="border:1px solid #FFF;margin:5px -10px 10px -10px">
+    </div>
+  </ion-content>
+</ion-view>

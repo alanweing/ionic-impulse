@@ -22,7 +22,8 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             score: points,
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: true
           });
         }
       });
@@ -43,7 +44,8 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             score: res,
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
-            api_token: $localStorage.api_token
+            api_token: $localStorage.api_token,
+            extra: false
           });
         }
       });
@@ -73,14 +75,23 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
 
   $scope.getParticipants = function ()
   {
-    ApiService.request('POST', 'workshop/participants', {
-      workshop_id: $scope.workshop.workshop.id,
-      schedule_id: $scope.workshop.schedules[0].id,
-      api_token: $localStorage.api_token
-    }).then(function (response)
+    if ($scope.workshop.schedules.length > 0)
     {
-      $scope.users = response;
-    });
+      ApiService.request('POST', 'workshop/participants', {
+        workshop_id: $scope.workshop.workshop.id,
+        schedule_id: $scope.workshop.schedules[0].id,
+        api_token: $localStorage.api_token
+      }).then(function (response)
+      {
+        $scope.users = response;
+      });
+    }
+    else
+    {
+      $ionicPopup.alert({
+        subTitle: 'Essa oficina já terminou!'
+      });
+    }
   };
 
   $scope.getParticipants();

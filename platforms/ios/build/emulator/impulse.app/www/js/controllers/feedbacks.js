@@ -17,14 +17,18 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage, A
     return FeedbacksService.currentWorkshopFeedback;
   };
 
-  $scope.get = function ()
+  $scope.refresh = function ()
   {
-    ApiService.request('GET', 'feedbacks').then(function (response)
+    $scope.$broadcast('scroll.refreshComplete');
+    $scope.feedbacks = [];
+    ApiService.request('GET', 'feedbacks')
+      .then(function (response)
     {
+      console.log(response);
       $scope.feedbacks = response;
     }, function (error)
     {
-      console.log(error);
+      // console.log(error);
     });
   };
 
