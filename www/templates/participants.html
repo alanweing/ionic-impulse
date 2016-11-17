@@ -3,6 +3,10 @@
     Participantes
   </ion-nav-title>
   <ion-content class="participants">
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="getParticipants()">
+    </ion-refresher>
     <div>
       <div class="participant-card"
            ng-repeat="participant in users">

@@ -7,9 +7,11 @@
       <div style="float:left;width:60%;margin-left:25px;'">
         <h1 class="workshop" style="font-size:6vw;">{{ workshop['workshop'].title }}</h1>
         <h4 class="workshop" style="font-size:4vw" ng-if="role==1">Início: {{ workshop.schedule.start.slice(11, 16) + 'h'}}</h4>
+        <br>
         <h4 class="workshop" style="font-size:4vw" ng-if="role==1">Fim: {{ workshop.schedule.end.slice(11, 16) + 'h'}}</h4>
 
         <h4 class="workshop" style="font-size:4vw" ng-if="role!=1">Início: {{ workshop['schedules'][0].start.slice(11, 16) + 'h'}}</h4>
+        <br>
         <h4 class="workshop" style="font-size:4vw" ng-if="role!=1">Fim: {{ workshop['schedules'][0].end.slice(11, 16) + 'h'}}</h4>
       </div>
       <div class="workshop"
@@ -19,21 +21,21 @@
         <button ui-sref="group" style="position:absolute;right:0;margin-right:20px;">Grupo</button>
         <div class="btn-check-in" ng-click="checkIn()" ng-class="{'disabled': !workshop.can_check_in}">CHECK-IN</div>
       </div>
-      <div ng-if="role!=1"
-           style="clear:both;"
-           class="workshops-evaluator">
-        <div class="workshop-evaluator-button"
-             style="background: #46B0BE;"
-             ui-sref="participants">
-          <i class="icon ion-android-person"></i>
-          <h2>PARTICIPANTES</h2>
-        </div>
-        <div class="workshop-evaluator-button"
-             style="background: #F5C62A;"
-             ui-sref="groups">
-          <i class="icon ion-ios-people" style="margin-left: 24%"></i>
-          <h2>GRUPOS</h2>
-        </div>
+    </div>
+    <div ng-if="role!=1"
+         style="clear:both;"
+         class="workshops-evaluator">
+      <div class="workshop-evaluator-button"
+           style="background: #00897B;"
+           ui-sref="participants">
+        <i class="icon ion-android-person"></i>
+        <h2>PARTICIPANTES</h2>
+      </div>
+      <div class="workshop-evaluator-button"
+           style="background: #F5C62A;"
+           ui-sref="groups">
+        <i class="icon ion-ios-people" style="margin-left: 28%"></i>
+        <h2 style="margin-left:-8%;">GRUPOS</h2>
       </div>
     </div>
   </ion-content>

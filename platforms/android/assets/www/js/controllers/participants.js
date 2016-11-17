@@ -31,14 +31,15 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
     else if (type == 'prompt')
     {
       $ionicPopup.prompt({
-        subTitle: 'Digite a pontuação',
+        title: 'Digite a pontuação',
+        subTitle: '0 = não apresenta<br>0 = não apresenta<br>0 = não apresenta<br>0 = não apresenta<br>',
         inputType: 'number',
         cancelText: 'Cancelar',
         okText: 'Ok',
         cssClass: 'modal-points-custom'
       }).then(function (res)
       {
-        if (res != undefined && res != 0 && res != null)
+        if (res != undefined && res != 0 && res != null && res <= 10)
         {
           ApiService.request('POST', 'addPointsToUser', {
             score: res,
@@ -46,6 +47,14 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             workshop_id: $scope.workshop.workshop.id,
             api_token: $localStorage.api_token,
             extra: false
+          });
+        }
+        else if (res)
+        {
+          $ionicPopup.alert({
+            subTitle: 'Valor máximo deve ser 10.'
+          }).then(function () {
+            $scope.addPointsToUser(points, userId, type);
           });
         }
       });
@@ -83,6 +92,7 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
         api_token: $localStorage.api_token
       }).then(function (response)
       {
+        $scope.$broadcast('scroll.refreshComplete');
         $scope.users = response;
       });
     }

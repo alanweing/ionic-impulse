@@ -166,7 +166,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		tFeddR/v3uM8Ae/8loMHDA7W0HM=
+		rsO6vJML8Wh1RrjIq8icZkDad7M=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -326,15 +326,19 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		8yuKPr1tNEj2S+t11+4nWIaoBgY=
+		29PByPLOu8bqFleu6cfZTANrm+g=
 		</data>
 		<key>www/js/app.js</key>
 		<data>
-		nJhM7itmGywlp895cVTxK4jvQSM=
+		czITcpncdSrQvXN6H1hTMwziG3M=
 		</data>
 		<key>www/js/controllers/authentication.js</key>
 		<data>
 		YY3V+24GZCyz1e7DP2UuvTVhI8g=
+		</data>
+		<key>www/js/controllers/curricula.js</key>
+		<data>
+		TdJ2R5F/Ju8BrNQ31J5+hta8r+c=
 		</data>
 		<key>www/js/controllers/evaluations.js</key>
 		<data>
@@ -362,7 +366,7 @@
 		</data>
 		<key>www/js/controllers/sidemenu.js</key>
 		<data>
-		vlUjbhAg3onPMDbtMvho4s/tRn8=
+		BMy4F7o3VXC7WFzUK+fhZTk8xbA=
 		</data>
 		<key>www/js/controllers/workshop.js</key>
 		<data>
@@ -936,6 +940,10 @@
 		<data>
 		7eWASE2J8GRzMLiGkSDtV9vx0Io=
 		</data>
+		<key>www/templates/curricula.html</key>
+		<data>
+		zeCmFrZ7Wvg2OA6WaZQ7k/Xsv4s=
+		</data>
 		<key>www/templates/detailed-feedbacks.html</key>
 		<data>
 		srbSApUP2aR0Pb3iMhe2Nyr/BIk=
@@ -1425,11 +1433,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tFeddR/v3uM8Ae/8loMHDA7W0HM=
+			rsO6vJML8Wh1RrjIq8icZkDad7M=
 			</data>
 			<key>hash2</key>
 			<data>
-			RmSe4v3iK5LteBrPDsl0m8ein6VgTgXmg1FpxHpmg8w=
+			k3c95rw0QXEYiqTsoVTKqi/6BkRXP2hP/cC4FkObcck=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -1865,22 +1873,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8yuKPr1tNEj2S+t11+4nWIaoBgY=
+			29PByPLOu8bqFleu6cfZTANrm+g=
 			</data>
 			<key>hash2</key>
 			<data>
-			AvrfPdupTssDg/7o7+Y4SNVfgL0p+27zhbnvjCG2kos=
+			ew5XdKJAAZP5+z5ce52nQuHs8WOIXYmwpe+XcT+Wstc=
 			</data>
 		</dict>
 		<key>www/js/app.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nJhM7itmGywlp895cVTxK4jvQSM=
+			czITcpncdSrQvXN6H1hTMwziG3M=
 			</data>
 			<key>hash2</key>
 			<data>
-			LcGDWivct0oVpk8J4UMz/P9GNEF28LJzsALHg/kssvs=
+			nRMFzu61FZ3tiHYnFGWvP6lIEsJiqyvqlV4C0wmlNxs=
 			</data>
 		</dict>
 		<key>www/js/controllers/authentication.js</key>
@@ -1892,6 +1900,17 @@
 			<key>hash2</key>
 			<data>
 			qklETK5jmBBwcgKcZSs/udN1Y09E/7gtdlII1cc/z0g=
+			</data>
+		</dict>
+		<key>www/js/controllers/curricula.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TdJ2R5F/Ju8BrNQ31J5+hta8r+c=
+			</data>
+			<key>hash2</key>
+			<data>
+			7aRA/GuOzMQ2tuNxndrvp6rG4FQ7AfjU/DS9uBggWzw=
 			</data>
 		</dict>
 		<key>www/js/controllers/evaluations.js</key>
@@ -1964,11 +1983,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vlUjbhAg3onPMDbtMvho4s/tRn8=
+			BMy4F7o3VXC7WFzUK+fhZTk8xbA=
 			</data>
 			<key>hash2</key>
 			<data>
-			pITZpOunejSdtXI4X2DiugaNFA/RnK+BxBlWpRcYr8s=
+			HLNkzwH8Voa4/PnQtD0CzToMzNZD+TX8lZOmcS/anzs=
 			</data>
 		</dict>
 		<key>www/js/controllers/workshop.js</key>
@@ -3542,6 +3561,17 @@
 			<key>hash2</key>
 			<data>
 			qGzU+YaWUuQ/LQiF31mV3QFcVAL6P7+5FZZbqIc4Q5o=
+			</data>
+		</dict>
+		<key>www/templates/curricula.html</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zeCmFrZ7Wvg2OA6WaZQ7k/Xsv4s=
+			</data>
+			<key>hash2</key>
+			<data>
+			gZSJU9HRcrasTiGMga08TNnfrp+3XMPmZNuEEiTGrME=
 			</data>
 		</dict>
 		<key>www/templates/detailed-feedbacks.html</key>

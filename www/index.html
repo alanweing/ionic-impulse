@@ -41,6 +41,7 @@
   <script src="js/controllers/evaluations.js"></script>
   <script src="js/controllers/score.js"></script>
   <script src="js/controllers/ranking.js"></script>
+  <script src="js/controllers/curricula.js"></script>
   <script src="js/services/api.js" ></script>
 
 </head>
@@ -63,12 +64,12 @@
           <ion-item menu-close
                     ng-click="goToGroup()"
                     ng-if="role==1">
-            <i class="icon ion-ios-people"> Grupo</i>
+            <i class="icon ion-ios-people"> Meu Grupo</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToMyEvaluations()"
                     ng-if="role!=1">
-            <i class="icon ion-clipboard"> Minhas Avaliações</i>
+            <i class="icon ion-compose"> Minhas Avaliações</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToRanking()"
@@ -80,8 +81,10 @@
                     ng-if="role!=1">
             <i class="icon ion-ios-people"> Grupos</i>
           </ion-item>
-          <ion-item menu-close ng-click="debug()">
-            <i class="icon ion-code-working"> Debug</i>
+          <ion-item menu-close
+                    ng-click="goToCurricula()"
+                    ng-if="role!=1">
+            <i class="icon ion-clipboard"> Currículos</i>
           </ion-item>
           <ion-item menu-close ng-click="logout()">
             <i class="icon ion-android-exit"> Sair</i>

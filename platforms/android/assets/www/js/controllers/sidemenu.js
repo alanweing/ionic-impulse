@@ -4,6 +4,7 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
 {
   $scope.profilePicture = $localStorage.imageUrl;
   $scope.role = $localStorage.role;
+  console.log($scope.role);
 
   $scope.logout = function ()
   {
@@ -16,7 +17,7 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
 
     $timeout(function () {
       $ionicLoading.hide();
-      $ionicHistory.clearCache();
+      $ionicHistory.clearCache ();
       $ionicHistory.clearHistory();
       $ionicHistory.nextViewOptions({
         disableBack: true,
@@ -59,6 +60,11 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
   $scope.goToMyEvaluations = function ()
   {
     $state.go('myEvaluations');
+  };
+
+  $scope.goToCurricula = function ()
+  {
+    $state.go('curricula');
   };
 
 });

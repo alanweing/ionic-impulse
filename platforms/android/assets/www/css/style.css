@@ -5,7 +5,7 @@
   text-align: center;
   color: #FFF;
   border: 4px solid #31B2EA;
-  height: 150px;
+  height: 160px;
 
 }
 
@@ -107,7 +107,6 @@
 .group-item img {
 
   margin: -21px 0 0 -32px;
-  background: #000;
   width: 76px;
   border-radius: 50%;
   float: left;
@@ -140,7 +139,7 @@
 
 .feedback-item h2 {
 
-  color: #31B2EA;
+  color: #0D47A1;
   font-size: 5vw;
   margin-left: 40px;
   white-space: nowrap;
@@ -197,7 +196,7 @@
 
 .feedback-description h2 {
 
-  color: #31B2EA;
+  color: #0D47A1;
   font-size: 5vw;
 
 }
@@ -298,16 +297,30 @@
 .workshops-evaluator .workshop-evaluator-button {
 
   float: left;
-  width: 45%;
-  margin: 20px 2%;
+  width: 49%;
+  margin: 20px 1%;
+
+}
+
+.workshops-evaluator .workshop-evaluator-button:first-child {
+
+  margin-left: 0;
+
+}
+
+.workshops-evaluator .workshop-evaluator-button:last-child {
+
+  margin-right: 0;
+  right: 0;
+  position: absolute;
 
 }
 
 .workshops-evaluator .workshop-evaluator-button i {
 
-  font-size: 25vw;
+  font-size: 20vw;
   color: #FFF;
-  margin-left: 28%;
+  margin-left: 32%;
 
 }
 
@@ -404,10 +417,18 @@
 
 }
 
+.modal-points-custom .popup-title {
+
+  color: #FFF;
+  text-align: left;
+
+}
+
 .modal-points-custom .popup-sub-title {
 
   color: #FFF;
   background: #666;
+  text-align: left;
 
 }
 
@@ -666,7 +687,7 @@
   display: block;
   background: #00AAE7;
   margin: 0 5px;
-  padding-bottom: 10px;
+  padding: 20px 0;
 }
 
 .home-evaluator-footer h3, h4, h2{

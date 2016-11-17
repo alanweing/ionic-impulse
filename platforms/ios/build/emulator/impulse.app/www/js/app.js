@@ -16,7 +16,8 @@ var app = angular.module('impulse', [
   'impulse.controllers.participants',
   'impulse.controllers.evaluations',
   'impulse.controllers.score',
-  'impulse.controllers.ranking'
+  'impulse.controllers.ranking',
+  'impulse.controllers.curricula'
 ]);
 
 app.run(function($ionicPlatform)
@@ -108,6 +109,11 @@ app.config(function ($stateProvider, $urlRouterProvider)
       url: '/ranking',
       templateUrl: 'templates/ranking.html',
       controller: 'RankingController'
+    })
+    .state('curricula', {
+      url: '/curricula',
+      templateUrl: 'templates/curricula.html',
+      controller: 'CurriculaController'
     });
 
   $urlRouterProvider.otherwise('/login');
@@ -115,6 +121,8 @@ app.config(function ($stateProvider, $urlRouterProvider)
 });
 
 app.constant('globals', {
-  'siteUrl': 'http://impulsecareers.com.br/',
-  'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
+  // 'siteUrl': 'http://impulsecareers.com.br/',
+  // 'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
+  'siteUrl': 'http://localhost:8000/',
+  'apiUrl': 'http://localhost:8000/impulse_api/'
 });

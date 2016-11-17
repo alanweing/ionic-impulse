@@ -61,4 +61,9 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
     $state.go('myEvaluations');
   };
 
+  $scope.goToCurricula = function ()
+  {
+    $state.go('curricula');
+  };
+
 });
