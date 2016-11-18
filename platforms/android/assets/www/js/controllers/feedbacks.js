@@ -24,7 +24,6 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage, A
     ApiService.request('GET', 'feedbacks')
       .then(function (response)
     {
-      console.log(response);
       $scope.feedbacks = response;
     }, function (error)
     {

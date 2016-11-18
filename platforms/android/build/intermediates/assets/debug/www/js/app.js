@@ -10,6 +10,7 @@ var app = angular.module('impulse', [
   'impulse.controllers.feedbacks',
   'impulse.services.feedbacks',
   'impulse.services.api',
+  'impulse.services.user',
   'impulse.controllers.sidemenu',
   'impulse.controllers.workshop',
   'impulse.controllers.group',

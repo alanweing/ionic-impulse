@@ -1,10 +1,11 @@
 var app = angular.module('impulse.controllers.sidemenu', []);
 
-app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, $state, $localStorage, WorkshopsService, $ionicHistory)
+app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope,
+                                               $state, $localStorage,
+                                               WorkshopsService, $ionicHistory,
+                                               UserService)
 {
-  $scope.profilePicture = $localStorage.imageUrl;
-  $scope.role = $localStorage.role;
-  console.log($scope.role);
+  $scope.model = UserService;
 
   $scope.logout = function ()
   {

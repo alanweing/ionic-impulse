@@ -10,7 +10,6 @@ app.controller('EvaluationsController', function ($scope, ApiService)
     ApiService.request('GET', 'evaluations')
       .then(function (response)
     {
-      console.log(response);
       $scope.evaluations = response;
     });
   };

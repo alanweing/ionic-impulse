@@ -34,6 +34,8 @@
   <script src="js/controllers/feedbacks.js"></script>
   <script src="js/services/feedbacks.js" ></script>
 
+  <script src="js/services/user.js" ></script>
+
   <script src="js/controllers/sidemenu.js"></script>
   <script src="js/controllers/workshop.js"></script>
   <script src="js/controllers/group.js"></script>
@@ -53,37 +55,37 @@
         <ion-list class="side-menu">
           <ion-item menu-close
                     ng-click="goToFeedbacks()"
-                    ng-if="role==1">
+                    ng-if="model.isUser()">
             <i class="icon ion-ios-paper"> Feedbacks</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToScore()"
-                    ng-if="role==1">
+                    ng-if="model.isUser()">
             <i class="icon ion-ribbon-a"> Pontuação</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToGroup()"
-                    ng-if="role==1">
+                    ng-if="model.isUser()">
             <i class="icon ion-ios-people"> Meu Grupo</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToMyEvaluations()"
-                    ng-if="role!=1">
+                    ng-if="!model.isUser()">
             <i class="icon ion-compose"> Minhas Avaliações</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToRanking()"
-                    ng-if="role!=1">
+                    ng-if="!model.isUser()">
             <i class="icon ion-podium"> Ranking</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToGroups()"
-                    ng-if="role!=1">
+                    ng-if="!model.isUser()">
             <i class="icon ion-ios-people"> Grupos</i>
           </ion-item>
           <ion-item menu-close
                     ng-click="goToCurricula()"
-                    ng-if="role!=1">
+                    ng-if="!model.isUser()">
             <i class="icon ion-clipboard"> Currículos</i>
           </ion-item>
           <ion-item menu-close ng-click="logout()">

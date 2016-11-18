@@ -23,7 +23,8 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
             api_token: $localStorage.api_token,
-            extra: true
+            extra: true,
+            special: false
           });
         }
       });
@@ -32,29 +33,53 @@ app.controller('ParticipantsController', function ($scope, WorkshopsService, Api
     {
       $ionicPopup.prompt({
         title: 'Digite a pontuação',
-        subTitle: '0 = não apresenta<br>0 = não apresenta<br>0 = não apresenta<br>0 = não apresenta<br>',
+        subTitle: '1 = não apresenta<br>2 = abaixo do esperado<br>3 = dentro do esperado<br>4 = acima do esperado<br>5 = excelência',
         inputType: 'number',
         cancelText: 'Cancelar',
         okText: 'Ok',
         cssClass: 'modal-points-custom'
       }).then(function (res)
       {
-        if (res != undefined && res != 0 && res != null && res <= 10)
+        if (res != undefined && res != 0 && res != null && res <= 5)
         {
           ApiService.request('POST', 'addPointsToUser', {
             score: res,
             user_id: userId,
             workshop_id: $scope.workshop.workshop.id,
             api_token: $localStorage.api_token,
-            extra: false
+            extra: false,
+            special: false
           });
         }
         else if (res)
         {
           $ionicPopup.alert({
-            subTitle: 'Valor máximo deve ser 10.'
+            subTitle: 'Valor máximo deve ser 5.'
           }).then(function () {
             $scope.addPointsToUser(points, userId, type);
+          });
+        }
+      });
+    }
+    else if (type == 'extra')
+    {
+      $ionicPopup.prompt({
+        title: 'Digite a pontuação extra',
+        inputType: 'number',
+        cancelText: 'Cancelar',
+        okText: 'Ok',
+        cssClass: 'modal-points-custom'
+      }).then(function (res)
+      {
+        if (res != undefined && res != 0 && res != null)
+        {
+          ApiService.request('POST', 'addPointsToUser', {
+            score: res,
+            user_id: userId,
+            workshop_id: $scope.workshop.workshop.id,
+            api_token: $localStorage.api_token,
+            extra: false,
+            special: true
           });
         }
       });

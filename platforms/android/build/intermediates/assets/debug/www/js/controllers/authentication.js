@@ -1,7 +1,8 @@
 var app = angular.module('impulse.controllers.authentication', []);
 
 app.controller('LoginController', function ($scope, $state, $window, $ionicHistory,
-                                            AuthenticationService, $localStorage, ApiService, WorkshopsService)
+                                            AuthenticationService, $localStorage,
+                                            ApiService, UserService)
 {
   $scope.login = function (form)
   {
@@ -13,6 +14,7 @@ app.controller('LoginController', function ($scope, $state, $window, $ionicHisto
         password:  $scope.formData.password
       }).then(function (response)
       {
+        UserService.refresh();
         $state.go('home', {}, {reload:true});
       }, function (error)
       {
@@ -31,6 +33,7 @@ app.controller('LoginController', function ($scope, $state, $window, $ionicHisto
     {
       ApiService.request('GET', 'validateToken').then(function(response)
       {
+        UserService.refresh();
         $state.go('home', {}, {reload:true});
       }, function(error)
       {
