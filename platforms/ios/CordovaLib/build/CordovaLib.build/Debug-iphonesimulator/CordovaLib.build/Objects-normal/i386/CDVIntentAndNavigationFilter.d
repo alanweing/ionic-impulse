@@ -9,12 +9,12 @@ dependencies: \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVCommandDelegate.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVWebViewEngineProtocol.h \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVWhitelist.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDV.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVAppDelegate.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVViewController.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVCommandQueue.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVScreenOrientationDelegate.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVURLProtocol.h \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVWhitelist.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVTimer.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/CordovaLib/Classes/Public/CDVUserAgentUtil.h

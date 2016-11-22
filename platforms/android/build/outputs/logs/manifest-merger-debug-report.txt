@@ -2,21 +2,21 @@
 manifest
 ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:1-14:12
 	package
-		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:98-140
+		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:102-145
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:70-97
+		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:74-101
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 	android:hardwareAccelerated
 		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:11-45
 	android:versionCode
-		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:46-69
+		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:46-73
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 		INJECTED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:141-199
+		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:2:146-204
 supports-screens
 ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:3:5-191
 	android:largeScreens
@@ -45,7 +45,7 @@ ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/Andr
 		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:5:53-82
-activity#com.ionicframework.impulse760056.MainActivity
+activity#br.com.impulsecareers.app.impulse.MainActivity
 ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /Users/alanwe/Documents/projects/ionic/impulse/platforms/android/AndroidManifest.xml:6:97-134

@@ -15,6 +15,10 @@ app.controller('GroupParticipantsController', function ($scope, GroupService, gl
     {
       image = 'default.jpg'
     }
+    else
+    {
+      image = image.profile_image;
+    }
     return globals.siteUrl + 'uploads/profile_pictures/' + image;
   };
 

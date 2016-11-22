@@ -8,7 +8,6 @@ app.service('FeedbacksService', function()
     'setCurrentWorkshop': function (workshop)
     {
       self.currentWorkshopFeedback = workshop;
-      // console.log(workshop);
     }
   };
   return self;

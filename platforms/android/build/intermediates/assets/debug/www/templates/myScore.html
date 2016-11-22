@@ -9,6 +9,12 @@
       on-refresh="refresh()">
     </ion-refresher>
 
+    <div class="score-card"
+         style="width: 100%;margin:10px;padding:10px">
+      <span class="extra"><i class="icon ion-ios-star" style="font-size:4vw">Pontuação extra</i></span>
+      <i class="icon ion-ios-star" style="font-size:4vw;clear:both;margin-top:2%">Feedbacks</i>
+    </div>
+
     <div style="padding:20px;">
       <div class="score-card"
            ng-repeat="(workshop, data) in scores" style="clear:both;padding:20px 0;">
@@ -18,17 +24,34 @@
           <h1 class="score-title">{{ workshop }}</h1>
         </div>
         <div ng-repeat="score in data"
-             style="clear:both;" ng-class="{'extra': score.score.score_extra > 0}">
-          <i class="icon ion-ios-star"></i>
-          <h2 ng-if="score.score.score > 0">{{ score.score.score }}</h2>
-          <h2 ng-if="score.score.score_extra > 0">{{ score.score.score_extra }}</h2>
-          <h4>{{ score.score.author }}</h4>
+             style="clear:both;"
+             ng-class="{'extra': score.score.score_extra > 0}">
+          <div>
+            <i class="icon ion-ios-star"></i>
+            <h2 ng-if="score.score.score > 0">{{ score.score.score }}</h2>
+            <h2 ng-if="score.score.score_special > 0">{{ score.score.score_special }}</h2>
+            <!--<h2 ng-if="score.score.score_extra > 0"></h2>-->
+            <div>
+              <h4>{{ score.evaluator.name }}
+                <br ng-if="score.details != ''">
+                <span ng-if="score.details != ''">
+                  ({{ score.details }})
+                </span>
+                <span ng-if="score.score.score_extra > 0"> o considerou como melhor participante nessa oficina.</span>
+              </h4>
+            </div>
+          </div>
+
         </div>
+        <!--<div class="score-card extra" style="clear: both;">-->
+        <!--<i class="icon ion-ios-star"></i>-->
+        <!--<h2>{{ scoreExtra }}<span style="font-size: 4vw">(Média da pontuação extra)</span></h2>-->
+      <!--</div>-->
       </div>
-      <div class="score-footer">
-        <h2>TOTAL:</h2>
-        <h4>{{ total }} pontos</h4>
-      </div>
+      <!--<div class="score-footer">-->
+        <!--<h2>TOTAL:</h2>-->
+        <!--<h4>{{ total }} pontos</h4>-->
+      <!--</div>-->
     </div>
   </ion-content>
 </ion-view>

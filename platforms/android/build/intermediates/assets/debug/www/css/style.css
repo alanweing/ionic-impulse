@@ -111,6 +111,7 @@
   border-radius: 50%;
   float: left;
   border: 2px solid #FFF;
+  background: #FFF;
 
 }
 
@@ -163,10 +164,20 @@
   margin: -18px 10px 0 -50px;
   background: #60B9EB;
   width: 90px;
+  height: 95px;
   border-radius: 50%;
   float: left;
   border: 2px solid #31B2EA;
   padding: 10px;
+  text-align: center;
+
+}
+
+.feedback-item i {
+
+  margin-top: 30px;
+  color: #FFF;
+  font-size: 50px;
 
 }
 
@@ -182,22 +193,22 @@
 
   /*margin:40px 20px 15px 70px;*/
   margin: 30px;
-  padding: 15px;
+  padding: 15px 15px 30px 15px;
   background: #FFF;
   border-radius: 2px;
 
 }
 
-.feedback-description:last-child {
+/*.feedback-description:last-child {*/
 
-  background: #31B2EA;
+  /*background: #31B2EA;*/
 
-}
+/*}*/
 
 .feedback-description h2 {
 
   color: #0D47A1;
-  font-size: 5vw;
+  font-size: 4vw;
 
 }
 
@@ -600,14 +611,15 @@
 
 .score-card h4 {
 
+  display: block;
   float: left;
   color: #FFF;
   font-weight: 200;
   font-size: 4vw;
-  margin: 30px 0 0 20px;
-
+  margin: 8% 0 0 3%;
 
 }
+
 
 .score-card img {
 
@@ -637,17 +649,8 @@
 
 }
 
-.extra h2 {
-
-  font-size: 10vw;
-  margin: 18px 0 0 0;
-
-}
-
-.extra h2:before {
-
-  content: '+';
-
+.extra h4 {
+  width: 80%;
 }
 
 .score-footer {
@@ -716,6 +719,170 @@
 .form-error {
 
   color: #F00;
+  text-align: center;
+
+}
+
+.curriculum-container {
+
+  padding: 20px;
+
+}
+
+.curriculum-user-card {
+
+  margin: 10% 0 10% 15%;
+  width: 80%;
+  background: #FFF;
+  padding: 3%;
+  border-radius: 2px;
+
+}
+
+.curriculum-user-card img {
+
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  width: 35%;
+  float: left;
+  margin: -9% 0 0 -28%;
+
+}
+
+.curriculum-user-card h4 {
+
+  margin-left: 8%;
+  color: #00AAE7;
+  font-weight: 200;
+  font-size: 6vw;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: block;
+
+}
+
+.feedback-input {
+
+  width: 100%;
+  height: 30px;
+  background: #E8E1DA;
+
+}
+
+.feedback-message {
+
+  display: block;
+  clear: both;
+
+}
+
+.message {
+
+  padding: 6px 6px 0 6px;
+  border-radius: 5px;
+  font-weight: 200;
+  margin: 2px 2px;
+  font-size: 4vw;
+
+}
+
+.message p {
+
+  padding-top: 4px;
+  font-size: 3vw;
+  float:right;
+  display: block;
+
+}
+
+.message-to {
+
+  background: #FFF;
+  float: left;
+  margin-right: 20%;
+
+}
+
+.message-from {
+
+  /*background: #DCF8C5;*/
+  margin-left: 20%;
+  background: #81D4FA;
+  float: right;
+
+}
+
+.messages-wrapper {
+
+  background: #E5DDD5;
+  border-radius: 2px;
+  padding: 5px 5px 60px 5px;
+
+}
+
+.group-average {
+
+  background: #FFF;
+  /*width: 100%;*/
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+
+}
+
+.group-average h2 {
+
+  color: #000;
+  text-transform: uppercase;
+  font-size: 6vw;
+
+}
+
+.group-average h3 {
+
+  font-size: 6vw;
+  text-decoration: underline;
+
+}
+
+.evaluation-table {
+
+  color: #FFF;
+  width: 100%;
+  text-align: center;
+
+}
+
+.evaluation-table table {
+  text-align: center;
+  margin-left: 5%;
+}
+
+.evaluation-table thead {
+
+  width: 100%;
+
+}
+
+.evaluation-table th {
+
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 2px 50px;
+
+}
+
+.evaluation-table tr:not(:last-child) {
+
+  border-bottom: 1px solid #FFF;
+
+}
+
+.evaluation-table td {
+
   text-align: center;
 
 }

@@ -7,23 +7,23 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
-        },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         }
     },
     "dependent_plugins": {}

@@ -7,8 +7,11 @@
       on-refresh="refresh()">
     </ion-refresher>
 
-    <div ng-repeat="obj in users" style="margin:10px;">
-      <h4>{{ obj.user.name }}: <span style="text-decoration:underline;font-weight:bold">{{ obj.score }}</span> pontos</h4>
+    <div ng-repeat="(name, obj) in users" style="margin:10px;">
+      <h4 style="text-transform: uppercase">{{ name }}:</h4>
+      <div ng-repeat="data in obj">
+        <h5 style="color:#FFF">{{ data.name }}: <span style="font-size:6vw;font-weight:bold;">{{ data.ranking }}</span> pontos</h5>
+      </div>
       <hr style="border:1px solid #FFF;margin:5px -10px 10px -10px">
     </div>
   </ion-content>

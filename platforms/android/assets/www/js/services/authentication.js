@@ -23,6 +23,8 @@ app.service('AuthenticationService', function ($q, $http, $ionicPopup,
           {
             // window.localStorage.setItem('app_token', response.data['api_token']);
             //   $localStorage.name = response.data['name'];
+            console.log(response);
+            $localStorage.id = response.data['id'];
             $localStorage.name = response.data['name'];
             $localStorage.email = response.data['email'];
             $localStorage.api_token = response.data['api_token'];

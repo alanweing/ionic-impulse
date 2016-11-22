@@ -44,7 +44,15 @@
   <script src="js/controllers/score.js"></script>
   <script src="js/controllers/ranking.js"></script>
   <script src="js/controllers/curricula.js"></script>
+  <script src="js/controllers/curriculum.js"></script>
+  <script src="js/controllers/questions.js"></script>
+  <script src="js/controllers/feedbackMessage.js"></script>
+  <script src="js/controllers/groupParticipants.js"></script>
+
   <script src="js/services/api.js" ></script>
+  <script src="js/services/curriculum.js" ></script>
+  <script src="js/services/question.js" ></script>
+  <script src="js/services/group.js" ></script>
 
 </head>
 <body ng-app="impulse" class="platform-android platform-cordova platform-webview">
@@ -54,41 +62,47 @@
       <ion-content>
         <ion-list class="side-menu">
           <ion-item menu-close
-                    ng-click="goToFeedbacks()"
+                    ng-click="goTo('feedbacks')"
                     ng-if="model.isUser()">
             <i class="icon ion-ios-paper"> Feedbacks</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToScore()"
+                    ng-click="goTo('score')"
                     ng-if="model.isUser()">
             <i class="icon ion-ribbon-a"> Pontuação</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToGroup()"
+                    ng-click="goTo('group')"
                     ng-if="model.isUser()">
-            <i class="icon ion-ios-people"> Meu Grupo</i>
+            <i class="icon ion-ios-people"> Minha Equipe</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToMyEvaluations()"
+                    ng-click="goTo('myEvaluations')"
                     ng-if="!model.isUser()">
             <i class="icon ion-compose"> Minhas Avaliações</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToRanking()"
+                    ng-click="goTo('ranking')"
                     ng-if="!model.isUser()">
             <i class="icon ion-podium"> Ranking</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToGroups()"
+                    ng-click="goTo('groups')"
                     ng-if="!model.isUser()">
-            <i class="icon ion-ios-people"> Grupos</i>
+            <i class="icon ion-ios-people"> Equipes</i>
           </ion-item>
           <ion-item menu-close
-                    ng-click="goToCurricula()"
+                    ng-click="goTo('curricula')"
                     ng-if="!model.isUser()">
             <i class="icon ion-clipboard"> Currículos</i>
           </ion-item>
-          <ion-item menu-close ng-click="logout()">
+          <ion-item menu-close
+                    ng-click="goTo('questions')"
+                    ng-if="!model.isUser()">
+            <i class="icon ion-chatbubbles"> Perguntas</i>
+          </ion-item>
+          <ion-item menu-close
+                    ng-click="logout()">
             <i class="icon ion-android-exit"> Sair</i>
           </ion-item>
         </ion-list>

@@ -18,21 +18,36 @@
             Avaliar
           </div>
           <div class="participant-button"
-               style="background:#CC91FD;"
+               style="background:#F5C62A;"
                ng-click="addPointsToUser(5, participant['user'].id, 'confirm')">
-            +5
+            <i class="icon ion-android-star" style="padding-left:2%;"></i>
           </div>
-          <div class="participant-button" style="background:#41CF9A"
+          <div class="participant-button"
+               style="background:#41CF9A"
                ng-click="addFeedbackToUser(participant['user'].id)">
             <i class="icon ion-ios-chatbubble"></i>
           </div>
         </div>
-        <div class="participant-buttons" style="padding-top: 15px;">
+
+
+        <div class="participant-buttons"
+             style="padding-top: 15px;"
+             ng-if="workshop.workshop.title=='Inglês'">
           <div class="participant-button" style="background:#7F7F7F;width:100%"
                ng-click="addPointsToUser(null, participant['user'].id, 'extra')">
-            pontos extra
+            nota da prova
           </div>
         </div>
+        <div class="participant-buttons"
+             style="padding-top: 15px;"
+             ng-if="workshop.workshop.title=='Atividades Radicais'">
+          <div class="participant-button" style="background:#7F7F7F;width:100%"
+               ng-click="addPointsToUser(null, participant['user'].id, 'extra')">
+            pontos na oficina
+          </div>
+        </div>
+
+
       </div>
     </div>
   </ion-content>

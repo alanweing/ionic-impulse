@@ -1,23 +1,24 @@
 <ion-view>
   <ion-nav-title>
-    Grupos
+    Equipes
   </ion-nav-title>
   <ion-content style="background:#F5C62A;padding-top:30px;">
     <div class="groups-card"
          ng-repeat="group in groups">
       <div class="group-color" style="background:{{ group.group.color }};"></div>
       <h2 class="block-text">{{ group.group.name }}</h2>
-      <h3>{{ group.users }} participantes</h3>
+      <h3 ng-click="goToParticipants(group)" style="color: #00AAE7;text-decoration: underline">
+        {{ group.users.length }} participantes</h3>
       <div class="buttons">
-        <div class="groups-button"
-             style="background:#7F7F7F"
-             ng-click="addScoreToGroup(null, group.group.id, 'prompt')">
-          Avaliar
-        </div>
+        <!--<div class="groups-button"-->
+             <!--style="background:#7F7F7F"-->
+             <!--ng-click="addScoreToGroup(null, group.group.id, 'prompt')">-->
+          <!--Avaliar-->
+        <!--</div>-->
         <div class="groups-button"
              style="background:#CC91FD"
              ng-click="addScoreToGroup(5, group.group.id, 'confirm')">
-          +5
+          <i class="icon ion-android-star"style="font-weight: 200"> Melhor equipe</i>
         </div>
       </div>
     </div>

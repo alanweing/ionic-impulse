@@ -7,14 +7,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-console": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-console"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
@@ -43,6 +35,14 @@
         "source": {
             "type": "registry",
             "id": "ionic-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console@~1.0.4"
         },
         "is_top_level": true,
         "variables": {}

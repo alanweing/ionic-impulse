@@ -1,10 +1,18 @@
 <ion-view hide-back-button="false">
   <ion-nav-title>
-    Grupo
+    Minha Equipe
   </ion-nav-title>
-  <ion-content style="background:#D9007B;padding-top:10px">
+  <ion-content style="background:{{ groupUsers.color }};padding-top:10px">
+
+    <div class="group-average">
+      <h2>Média da equipe</h2>
+      <h3>{{ groupUsers.average_score }}</h3>
+    </div>
+
     <div class="">
-      <div class="group-item" ng-repeat="user in groupUsers">
+      <div class="group-item"
+           ng-repeat="(key, user) in groupUsers"
+           ng-if="key!='average_score' && key!='color'">
         <img ng-src="{{ user.imageUrl }}">
         <h2>{{ user.name }}</h2>
       </div>

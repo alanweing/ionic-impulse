@@ -9,7 +9,7 @@ app.controller('FeedbackMessageController', function ($scope, QuestionService,
   $scope.user = QuestionService.currentUser;
   console.log($scope.user);
 
-  $scope.sendMessage = function (to, feedback_id, form)
+  $scope.sendMessage = function (to, feedback, form)
   {
     if (form != undefined && form.message != '')
     {
@@ -17,14 +17,23 @@ app.controller('FeedbackMessageController', function ($scope, QuestionService,
       ApiService.request('POST', 'message', {
         api_token: $localStorage.api_token,
         message: form.message,
-        feedback_id: feedback_id,
+        feedback_id: feedback.id,
         to: to
       })
         .then(function ()
         {
           $ionicPopup.alert({
             subTitle: 'Mensagem enviada!'
-          });
+          })
+            .then(function ()
+            {
+              feedback.messages.push({
+                message: form.message,
+                to: to,
+                from: $localStorage.id
+              });
+              form.message = '';
+            });
         })
         .finally(function ()
         {

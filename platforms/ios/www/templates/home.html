@@ -5,6 +5,9 @@
   <ion-nav-buttons side="right">
     <div class="item-avatar">
       <img ng-src="{{ profilePicture }}" class="impulse-avatar">
+      <script>
+
+      </script>
     </div>
   </ion-nav-buttons>
   <ion-nav-title>
@@ -12,6 +15,27 @@
   </ion-nav-title>
 
   <ion-content style="background:#31B2EA;">
+
+    <style>
+      .can-check-in {
+        background:#F5C62A
+      }
+      .has-checked-in {
+        background: #41CF9A;
+      }
+      .check-in-subtitle {
+        margin-top: 20px;
+        padding: 10px;
+        background: #FFF;
+        display: inline-block;
+        clear: both;
+        width: 100%;
+        font-weight: 200;
+      }
+      .check-in-subtitle i {
+        border-radius: 50%;
+      }
+    </style>
 
     <ion-refresher
       pulling-text="Puxe para atualizar..."
@@ -22,7 +46,10 @@
 
       <div class="col col-33 impulse-card"
            ng-repeat="workshop in workshops.workshops"
-           ng-class="{'home-last-element': (workshops.workshops.length % 3 > 0 && $last)}"
+           ng-class="{
+            'home-last-element': (workshops.workshops.length % 3 > 0 && $last),
+            'can-check-in': workshop.can_check_in,
+            'has-checked-in': workshop.has_checked_in}"
            ui-sref="competences"
            ng-click="workshops.setCurrentWorkshop(workshop)"
            ng-if="role==1">
@@ -48,6 +75,12 @@
       <h3 style="display: block">{{ workshops.workshops.actual.workshop.title }}</h3>
       <h4>Inicio: {{ workshops.workshops.actual.schedule.start.slice(11, 16) + 'h' }}</h4>
       <h4>Fim: {{ workshops.workshops.actual.schedule.end.slice(11, 16) + 'h' }}</h4>
+    </div>
+
+    <div ng-if="role==1" class="check-in-subtitle">
+      <i class="icon ion-record" style="color:#F5C62A"></i> Oficina em andamento
+      <br>
+      <i class="icon ion-record" style="color:#41CF9A"></i> Check-in realizado
     </div>
 
   </ion-content>

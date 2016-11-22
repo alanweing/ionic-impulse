@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-device/CDVDevice.m \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-device/CDVDevice.m \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDV.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailabilityDeprecated.h \
@@ -17,4 +17,4 @@ dependencies: \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVTimer.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-device/CDVDevice.h
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-device/CDVDevice.h

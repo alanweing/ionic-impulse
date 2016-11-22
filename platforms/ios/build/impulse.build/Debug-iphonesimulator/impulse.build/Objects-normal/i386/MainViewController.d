@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Classes/MainViewController.m \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Classes/MainViewController.h \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Classes/MainViewController.m \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Classes/MainViewController.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVViewController.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailabilityDeprecated.h \

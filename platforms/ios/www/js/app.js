@@ -10,6 +10,8 @@ var app = angular.module('impulse', [
   'impulse.controllers.feedbacks',
   'impulse.services.feedbacks',
   'impulse.services.api',
+  'impulse.services.user',
+  'impulse.services.curriculum',
   'impulse.controllers.sidemenu',
   'impulse.controllers.workshop',
   'impulse.controllers.group',
@@ -17,7 +19,8 @@ var app = angular.module('impulse', [
   'impulse.controllers.evaluations',
   'impulse.controllers.score',
   'impulse.controllers.ranking',
-  'impulse.controllers.curricula'
+  'impulse.controllers.curricula',
+  'impulse.controllers.questions'
 ]);
 
 app.run(function($ionicPlatform)
@@ -114,6 +117,26 @@ app.config(function ($stateProvider, $urlRouterProvider)
       url: '/curricula',
       templateUrl: 'templates/curricula.html',
       controller: 'CurriculaController'
+    })
+    .state('curriculum', {
+      url: '/curriculum',
+      templateUrl: 'templates/curriculum.html',
+      controller: 'CurriculumController'
+    })
+    .state('questions', {
+      url: '/questions',
+      templateUrl: 'templates/questions.html',
+      controller: 'QuestionsController'
+    })
+    .state('feedbackMessage', {
+      url: '/feedbackMessage',
+      templateUrl: 'templates/feedbacksMessages.html',
+      controller: 'FeedbackMessageController'
+    })
+    .state('groupParticipants', {
+      url: 'groupParticipants',
+      templateUrl: 'templates/groupParticipants.html',
+      controller: 'GroupParticipantsController'
     });
 
   $urlRouterProvider.otherwise('/login');
@@ -121,8 +144,8 @@ app.config(function ($stateProvider, $urlRouterProvider)
 });
 
 app.constant('globals', {
-  // 'siteUrl': 'http://impulsecareers.com.br/',
-  // 'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
-  'siteUrl': 'http://localhost:8000/',
-  'apiUrl': 'http://localhost:8000/impulse_api/'
+  'siteUrl': 'http://impulsecareers.com.br/',
+  'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
+  // 'siteUrl': 'http://localhost:8000/',
+  // 'apiUrl': 'http://localhost:8000/impulse_api/'
 });

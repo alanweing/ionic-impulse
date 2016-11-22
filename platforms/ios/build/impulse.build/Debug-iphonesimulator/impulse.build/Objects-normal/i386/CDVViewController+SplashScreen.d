@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.m \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.h \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.m \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-splashscreen/CDVViewController+SplashScreen.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVViewController.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailabilityDeprecated.h \

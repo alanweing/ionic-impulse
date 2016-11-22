@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/ionic-plugin-keyboard/IonicKeyboard.m \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/ionic-plugin-keyboard/IonicKeyboard.h \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/ionic-plugin-keyboard/IonicKeyboard.m \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/ionic-plugin-keyboard/IonicKeyboard.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \

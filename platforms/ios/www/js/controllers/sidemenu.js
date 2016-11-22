@@ -1,9 +1,11 @@
 var app = angular.module('impulse.controllers.sidemenu', []);
 
-app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, $state, $localStorage, WorkshopsService, $ionicHistory)
+app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope,
+                                               $state, $localStorage,
+                                               WorkshopsService, $ionicHistory,
+                                               UserService)
 {
-  $scope.profilePicture = $localStorage.imageUrl;
-  $scope.role = $localStorage.role;
+  $scope.model = UserService;
 
   $scope.logout = function ()
   {
@@ -16,7 +18,7 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
 
     $timeout(function () {
       $ionicLoading.hide();
-      $ionicHistory.clearCache();
+      $ionicHistory.clearCache ();
       $ionicHistory.clearHistory();
       $ionicHistory.nextViewOptions({
         disableBack: true,
@@ -26,44 +28,9 @@ app.controller('SideMenuController', function ($timeout, $ionicLoading, $scope, 
     }, 500);
   };
 
-  $scope.debug = function ()
+  $scope.goTo = function (url)
   {
-    console.log($localStorage);
-  };
-
-  $scope.goToRanking = function ()
-  {
-    $state.go('ranking');
-  };
-
-  $scope.goToGroup = function ()
-  {
-    $state.go('group');
-  };
-
-  $scope.goToFeedbacks = function ()
-  {
-    $state.go('feedbacks');
-  };
-
-  $scope.goToScore = function ()
-  {
-    $state.go('score');
-  };
-
-  $scope.goToGroups = function ()
-  {
-    $state.go('groups');
-  };
-
-  $scope.goToMyEvaluations = function ()
-  {
-    $state.go('myEvaluations');
-  };
-
-  $scope.goToCurricula = function ()
-  {
-    $state.go('curricula');
+    $state.go(url);
   };
 
 });

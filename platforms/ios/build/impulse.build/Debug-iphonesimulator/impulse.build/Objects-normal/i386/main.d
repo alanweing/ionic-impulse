@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/main.m
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/main.m

@@ -85,6 +85,7 @@ app.service('ApiService', function ($q, $http, globals, $ionicPopup, $localStora
             {
               if (url == 'authenticate')
               {
+                $localStorage.id = response.data['id'];
                 $localStorage.name = response.data['name'];
                 $localStorage.email = response.data['email'];
                 $localStorage.api_token = response.data['api_token'];

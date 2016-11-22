@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-console/CDVLogger.m \
-  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/impulse/Plugins/cordova-plugin-console/CDVLogger.h \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-console/CDVLogger.m \
+  /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/Impulse/Plugins/cordova-plugin-console/CDVLogger.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h \
   /Users/alanwe/Documents/projects/ionic/impulse/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
