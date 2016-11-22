@@ -1,28 +1,19 @@
 <ion-view>
   <ion-nav-title>
-    Feedbacks
+    {{ user.name }}
   </ion-nav-title>
-  <ion-content style="background:#31B2EA">
-
-    <div class="feedback-description-header" ng-if="model.currentWorkshopFeedback.icon != null">
-      <h2 class="block-text">{{ model.currentWorkshopFeedback.name }}</h2>
-      <img ng-src="img/workshops/icons/{{ model.currentWorkshopFeedback.icon }}">
-    </div>
-
-    <div style="clear: both"></div>
+  <ion-content style="background:#31B2EA;">
 
     <div class="feedback-description"
-         ng-repeat="(key, feedback) in model.currentWorkshopFeedback"
-         ng-if="key != 'icon' && key != 'name'">
+         ng-repeat="feedback in user.feedbacks">
       <h2 style="border-bottom:1px solid #000;padding-bottom:10px">{{ feedback.description }}</h2>
-      <h6>{{ feedback.evaluator.name }}</h6>
       <h6>{{ feedback.date }}</h6>
       <div class="messages-wrapper">
         <div class="feedback-message"
              ng-repeat="message in feedback.messages">
           <h6 class="message"
-              ng-class="{'message-from': message.from == user.id,
-                         'message-to': message.from != user.id}">
+              ng-class="{'message-from': message.from != user.id,
+                         'message-to': message.from == user.id}">
             {{ message.message }}
             <div style="width: 100%;">
               <p>{{ message.date }}</p>
@@ -39,7 +30,7 @@
                    ng-model="form.message">
           </label>
           <button class="button button-small"
-                  ng-click="sendMessage(feedback.evaluator.id, feedback.id, form)">
+                  ng-click="sendMessage(user.id, feedback.id, form)">
             Enviar
           </button>
         </div>

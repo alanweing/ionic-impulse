@@ -1,12 +1,16 @@
-var app = angular.module('impulse.controllers.group', []);
+var app = angular.module('impulse.controllers.group', [
+  'impulse.controllers.groupParticipants'
+]);
 
-app.controller('GroupController', function ($scope, ApiService, $localStorage, $ionicPopup)
+app.controller('GroupController', function ($scope, ApiService, $localStorage, $ionicPopup,
+                                            $state, GroupService, $ionicLoading)
 {
   $scope.groupUsers = [];
   $scope.groups = [];
 
   if ($localStorage.role == 1)
   {
+    $ionicLoading.show();
     ApiService.request('GET', 'group')
       .then(function (response)
       {
@@ -14,10 +18,15 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
       }, function (error)
       {
         console.log(error);
+      })
+      .finally(function ()
+      {
+        $ionicLoading.hide();
       });
   }
   else
   {
+    $ionicLoading.show();
     ApiService.request('GET', 'groups')
       .then(function (response)
       {
@@ -25,6 +34,10 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
       }, function (error)
       {
         console.log(error);
+      })
+      .finally(function ()
+      {
+        $ionicLoading.hide();
       });
   }
 
@@ -41,12 +54,17 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
       {
         if (res != undefined && res != 0 && res != null)
         {
+          $ionicLoading.show({template:'enviando avaliação'});
           ApiService.request('POST', 'addScoreToGroup', {
             score: res,
             group_id: groupId,
             api_token: $localStorage.api_token,
             extra: false
-          });
+          })
+            .finally(function ()
+            {
+              $ionicLoading.hide();
+            });
         }
       });
     }
@@ -61,15 +79,26 @@ app.controller('GroupController', function ($scope, ApiService, $localStorage, $
       {
         if (res)
         {
+          $ionicLoading.show({template:'enviando avaliação...'});
           ApiService.request('POST', 'addScoreToGroup', {
             score: score,
             group_id: groupId,
             api_token: $localStorage.api_token,
             extra: true
-          });
+          })
+            .finally(function ()
+            {
+              $ionicLoading.hide();
+            });
         }
       });
     }
-  }
+  };
+
+  $scope.goToParticipants = function (group)
+  {
+    GroupService.setCurrentGroup(group);
+    $state.go('groupParticipants');
+  };
 
 });

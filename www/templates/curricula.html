@@ -1,6 +1,15 @@
 <ion-view>
   <ion-nav-title>Curriculos</ion-nav-title>
   <ion-content style="background:#31B2EA;">
+    <div class="curriculum-container">
 
+      <div class="curriculum-user-card"
+           ng-repeat="curriculum in curricula"
+           ng-click="setCurrentCurriculum(curriculum)">
+        <img ng-src="{{ getProfilePictureUrl(curriculum.user.image.profile_image) }}">
+        <h4>{{ curriculum.user.name }}</h4>
+      </div>
+
+    </div>
   </ion-content>
 </ion-view>

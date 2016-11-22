@@ -1,6 +1,7 @@
 var app = angular.module('impulse.controllers.workshop', []);
 
-app.controller('WorkshopController', function ($scope, WorkshopsService, $localStorage, ApiService, $ionicPopup)
+app.controller('WorkshopController', function ($scope, WorkshopsService, $localStorage,
+                                               ApiService, $ionicPopup, $ionicLoading)
 {
   $scope.role = $localStorage.role;
   $scope.workshop = WorkshopsService.actualWorkshop;
@@ -27,13 +28,16 @@ app.controller('WorkshopController', function ($scope, WorkshopsService, $localS
   {
     if ($scope.workshop.can_check_in)
     {
+      $ionicLoading.show();
       ApiService.request('POST', 'checkIn', {
         workshop_id: $scope.workshop.workshop.id,
         schedule_id: $scope.workshop.schedule.id,
         api_token: $localStorage.api_token
       }).then(function (response) {
+        $ionicLoading.hide();
         $ionicPopup.alert({title: 'Sucesso!'})
       }, function (error) {
+        $ionicLoading.hide();
         if (error.status == 409)
         {
           $scope.alert(error.data.error.message)

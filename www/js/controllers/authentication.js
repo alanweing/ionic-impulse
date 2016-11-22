@@ -2,12 +2,15 @@ var app = angular.module('impulse.controllers.authentication', []);
 
 app.controller('LoginController', function ($scope, $state, $window, $ionicHistory,
                                             AuthenticationService, $localStorage,
-                                            ApiService, UserService)
+                                            ApiService, UserService, $ionicLoading)
 {
   $scope.login = function (form)
   {
     if (form.$valid)
     {
+      $ionicLoading.show({
+        hideOnStateChange: true
+      });
       ApiService.request('POST', 'authenticate',
       {
         email: $scope.formData.email,
@@ -18,7 +21,7 @@ app.controller('LoginController', function ($scope, $state, $window, $ionicHisto
         $state.go('home', {}, {reload:true});
       }, function (error)
       {
-
+        $ionicLoading.hide();
       });
     }
     else
@@ -31,18 +34,17 @@ app.controller('LoginController', function ($scope, $state, $window, $ionicHisto
   {
     if ($localStorage.api_token != null)
     {
+      $ionicLoading.show({
+        hideOnStateChange: true
+      });
       ApiService.request('GET', 'validateToken').then(function(response)
       {
         UserService.refresh();
         $state.go('home', {}, {reload:true});
       }, function(error)
       {
-        // reset();
+        $ionicLoading.hide();
       });
-    }
-    else
-    {
-      // reset();
     }
   };
 

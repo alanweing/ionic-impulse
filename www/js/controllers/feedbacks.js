@@ -1,8 +1,11 @@
 var app = angular.module('impulse.controllers.feedbacks', []);
 
-app.controller('FeedbacksController', function ($scope, $state, $localStorage, ApiService, FeedbacksService)
+app.controller('FeedbacksController', function ($scope, $state, $localStorage,
+                                                ApiService, FeedbacksService, $ionicLoading,
+                                                $ionicPopup, UserService)
 {
   $scope.model = FeedbacksService;
+  $scope.user = UserService;
   $scope.name = $localStorage.name;
   $scope.feedbacks = [];
 
@@ -12,6 +15,30 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage, A
     $state.go('detailedFeedbacks');
   };
 
+  $scope.sendMessage = function (to, feedback_id, form)
+  {
+    if (form != undefined && form.message != '')
+    {
+      $ionicLoading.show({template: 'enviando mensagem...'});
+      ApiService.request('POST', 'message', {
+        api_token: $localStorage.api_token,
+        message: form.message,
+        feedback_id: feedback_id,
+        to: to
+      })
+        .then(function ()
+        {
+          $ionicPopup.alert({
+            subTitle: 'Mensagem enviada!'
+          });
+        })
+        .finally(function ()
+        {
+          $ionicLoading.hide()
+        });
+    }
+  };
+
   $scope.getCurrentWorkshop = function ()
   {
     return FeedbacksService.currentWorkshopFeedback;
@@ -19,17 +46,17 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage, A
 
   $scope.refresh = function ()
   {
-    $scope.$broadcast('scroll.refreshComplete');
+    $ionicLoading.show();
     $scope.feedbacks = [];
     ApiService.request('GET', 'feedbacks')
       .then(function (response)
     {
+      $scope.$broadcast('scroll.refreshComplete');
       $scope.feedbacks = response;
-    }, function (error)
-    {
-      // console.log(error);
-    });
+    })
+      .finally(function ()
+      {
+        $ionicLoading.hide();
+      });
   };
-
-
 });

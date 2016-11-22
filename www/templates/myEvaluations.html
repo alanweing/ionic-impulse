@@ -4,9 +4,53 @@
   </ion-nav-title>
   <ion-content style="background:#47B3C0">
     <div class="evaluation-container">
+
+      <div class="evaluation-table">
+        <h2>Legenda</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>pontos</th>
+            <th>significado</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Não apresenta</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Abaixo do esperado</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dentro do esperado</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Acima do esperado</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Excelência</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2>Participantes</h2>
-      <div class="evaluation-content" ng-repeat="evaluation in evaluations.users">
+      <div class="evaluation-content"
+           ng-repeat="evaluation in evaluations.users"
+           ng-if="evaluation.score > 0">
         <span class="highlight">{{ evaluation.score }} pontos</span> para
+        <span class="highlight">{{ evaluation.name }}</span> na oficina
+        <span class="highlight">{{ evaluation.workshop }}</span>
+      </div>
+      <div class="evaluation-content"
+           ng-repeat="evaluation in evaluations.users"
+           ng-if="evaluation.score_extra > 0">
+        <span class="highlight">{{ evaluation.score_extra }} pontos extra</span> para
         <span class="highlight">{{ evaluation.name }}</span> na oficina
         <span class="highlight">{{ evaluation.workshop }}</span>
       </div>

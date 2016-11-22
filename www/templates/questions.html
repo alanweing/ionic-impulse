@@ -1,0 +1,35 @@
+<ion-view>
+  <ion-nav-title>
+    Perguntas
+  </ion-nav-title>
+  <ion-content style="background:#31B2EA;">
+
+    <ion-refresher
+      pulling-text="Puxe para atualizar..."
+      on-refresh="refresh()">
+    </ion-refresher>
+
+    <div class="list">
+      <!--<div class="feedback-item"-->
+           <!--ng-repeat="user in users">-->
+        <!--<div class="img-background">-->
+          <!--<img ng-src="img/workshops/icons/{{ feedback.workshop.icon }}">-->
+        <!--</div>-->
+        <!--<h4>{{ feedback.description }}</h4>-->
+        <!--<div ng-repeat="question in feedback.messages">-->
+          <!--<p>{{question.message}}</p>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <a class="item item-avatar"
+         ng-repeat="user in users" style="margin:10px;border-radius:2px;"
+         ng-click="setCurrentUser(user)">
+        <img ng-src="{{ getProfilePictureUrl(user.profile_image) }}">
+        <h2 style="color:#000;">{{ user.name }}</h2>
+        <p>Feedbacks realizados: {{ user.feedbacks.length }}</p>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

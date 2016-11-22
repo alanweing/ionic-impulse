@@ -24,7 +24,6 @@ app.service('WorkshopsService', function($q, $http, $localStorage, globals, ApiS
       ApiService.request('GET', 'workshop').then(function (response)
       {
         self.workshops = response;
-        // console.log(response);
         d.resolve();
       }, function (error)
       {

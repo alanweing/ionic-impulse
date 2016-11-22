@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-nav-title></ion-nav-title>
+  <ion-content style="background: {{ group.group.color }}">
+
+    <style>
+      .full-button {
+        background: #41CF9A;
+        color: #FFF;
+        padding: 10px;
+        text-align: center;
+        margin: 30px 20px 20px 20px;
+        font-size: 10vw;
+      }
+    </style>
+
+    <div>
+      <div class="participant-card"
+           ng-repeat="participant in group.users"
+           style="padding-bottom: 1px">
+        <img ng-src="{{ getProfilePictureUrl(participant.image) }}">
+        <h2 class="block-text" style="padding-bottom: 0">{{ participant.name }}</h2>
+        <div class="full-button"
+             ng-click="addFeedbackToUser(participant.id)">
+          <i class="icon ion-ios-chatbubble"></i>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
