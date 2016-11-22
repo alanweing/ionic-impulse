@@ -817,7 +817,9 @@
 
   background: #E5DDD5;
   border-radius: 2px;
-  padding: 5px 5px 60px 5px;
+  padding: 5px 5px 5px 5px;
+  display: inline-block;
+  width: 100%;
 
 }
 

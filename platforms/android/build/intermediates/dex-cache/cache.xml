@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/Users/alanwe/Documents/projects/ionic/impulse/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/release/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.3"
-        sha1="f15e93d7a032b4da62899de0d454b7b5816e5002">
-        <dex dex="/Users/alanwe/Documents/projects/ionic/impulse/platforms/android/build/intermediates/pre-dexed/release/CordovaLib-unspecified-release_e1ae006e4d680b77921ff333ca9f758d2afbbe3f.jar" />
-    </item>
-
-</items>
+<items version="2" />
