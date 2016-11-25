@@ -1,0 +1,66 @@
+<ion-view>
+  <ion-nav-title>
+    {{ user.name }}
+  </ion-nav-title>
+  <ion-content style="background: #2196F3">
+
+    <div class="considerations-wrapper">
+
+      <div class="consideration-card"
+           ng-repeat="(key, considerations) in user.considerations">
+
+        <div ng-if="key == 1">
+          <h2>Competências de Destaque</h2>
+          <h6 ng-repeat="consideration in considerations">
+            {{ consideration.considerations }}
+          </h6>
+          <div style="clear: both;display: block"></div>
+          <hr>
+          <h4>Descreva aqui as competências de destaque deste participante.</h4>
+          <input type="text"
+                 ng-model="data.featured"
+                 placeholder="destaque...">
+          <button ng-click="addConsideration(data, 1)">
+            enviar
+          </button>
+        </div>
+
+        <div ng-if="key == 2">
+          <h2>Competências a Desenvolver</h2>
+          <h6 ng-repeat="consideration in considerations">
+            {{ consideration.considerations }}
+          </h6>
+          <div style="clear: both;display: block"></div>
+          <hr>
+          <h4>Descreva aqui as competências a serem desenvolvidas por este participante.</h4>
+          <input type="text"
+                 ng-model="data.toDevelop"
+                 placeholder="a desenvolver...">
+          <button ng-click="addConsideration(data, 2)">
+            enviar
+          </button>
+        </div>
+
+        <div ng-if="key == 3">
+          <h2>Considerações</h2>
+          <h6 ng-repeat="consideration in considerations">
+            {{ consideration.considerations }}
+          </h6>
+          <div style="clear: both;display: block"></div>
+          <hr>
+          <h4>Descreva aqui algumas considerações para este participante.</h4>
+          <input type="text"
+                 ng-model="data.consideration"
+                 placeholder="considerações...">
+          <button ng-click="addConsideration(data, 3)">
+            enviar
+          </button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </ion-content>
+</ion-view>

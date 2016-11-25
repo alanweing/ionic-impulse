@@ -134,9 +134,14 @@ app.config(function ($stateProvider, $urlRouterProvider)
       controller: 'FeedbackMessageController'
     })
     .state('groupParticipants', {
-      url: 'groupParticipants',
+      url: '/groupParticipants',
       templateUrl: 'templates/groupParticipants.html',
       controller: 'GroupParticipantsController'
+    })
+    .state('considerations', {
+      url: '/considerations',
+      templateUrl: 'templates/userConsiderations.html',
+      controller: 'UserConsiderationsController'
     });
 
   $urlRouterProvider.otherwise('/login');

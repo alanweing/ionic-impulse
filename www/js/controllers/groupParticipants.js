@@ -1,13 +1,15 @@
 var app = angular.module('impulse.controllers.groupParticipants', [
-  'impulse.services.group'
+  'impulse.controllers.userConsiderations',
+  'impulse.services.group',
+  'impulse.services.considerations'
 ]);
 
 app.controller('GroupParticipantsController', function ($scope, GroupService, globals,
                                                         $ionicPopup, $ionicLoading, ApiService,
-                                                        $localStorage)
+                                                        $localStorage, $state, ConsiderationsService)
 {
   $scope.group = GroupService.currentGroup;
-  console.log($scope.group);
+  // console.log($scope.group);
 
   $scope.getProfilePictureUrl = function (image)
   {
@@ -47,4 +49,11 @@ app.controller('GroupParticipantsController', function ($scope, GroupService, gl
       }
     });
   };
+
+  $scope.goToConsiderations = function (user)
+  {
+    ConsiderationsService.setCurrentUser(user);
+    $state.go('considerations');
+  };
+
 });

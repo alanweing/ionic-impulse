@@ -16,13 +16,13 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
-        },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         },
         "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "br.com.impulsecareers.app.impulse"
         }
     },

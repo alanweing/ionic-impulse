@@ -7,7 +7,7 @@ app.controller('FeedbackMessageController', function ($scope, QuestionService,
                                                       ApiService, $localStorage)
 {
   $scope.user = QuestionService.currentUser;
-  console.log($scope.user);
+  // console.log($scope.user);
 
   $scope.sendMessage = function (to, feedback, form)
   {

@@ -16,7 +16,7 @@ app.controller('QuestionsController', function ($scope, ApiService, $ionicLoadin
     ApiService.request('GET', 'message')
       .then(function (response)
       {
-        console.log(response);
+        // console.log(response);
         $scope.users = response;
       })
       .finally(function ()

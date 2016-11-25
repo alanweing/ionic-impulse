@@ -12,10 +12,11 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage,
   $scope.setCurrentWorkshop = function (workshop)
   {
     FeedbacksService.setCurrentWorkshop(workshop);
+    console.log(workshop);
     $state.go('detailedFeedbacks');
   };
 
-  $scope.sendMessage = function (to, feedback_id, form)
+  $scope.sendMessage = function (feedback, form)
   {
     if (form != undefined && form.message != '')
     {
@@ -23,14 +24,23 @@ app.controller('FeedbacksController', function ($scope, $state, $localStorage,
       ApiService.request('POST', 'message', {
         api_token: $localStorage.api_token,
         message: form.message,
-        feedback_id: feedback_id,
-        to: to
+        feedback_id: feedback.id,
+        to: feedback.evaluator.id
       })
         .then(function ()
         {
           $ionicPopup.alert({
             subTitle: 'Mensagem enviada!'
-          });
+          })
+            .then(function ()
+            {
+              feedback.messages.push({
+                message: form.message,
+                to: feedback.evaluator.id,
+                from: $localStorage.id
+              });
+              form.message = '';
+            });
         })
         .finally(function ()
         {

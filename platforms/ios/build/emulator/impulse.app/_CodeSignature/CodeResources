@@ -86,7 +86,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B1Nw7z6tZuhThnuTtIq+wHDFy1w=
+		75fAMEa8gkHdGf/XSpvIEKCQFRg=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		zCc+2WL4b+WzyOe+tciLikhLNIc=
+		xqnSwx5SXnTle5CsqnaOLjvr8sc=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>www/css/style.css</key>
 		<data>
-		ZhAEF8Mr6hooEKzgUdWZ/9OMj9A=
+		QSxjnzyqs59lz3FUzQENzMn/6kg=
 		</data>
 		<key>www/img/impulse.png</key>
 		<data>
@@ -314,11 +314,11 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		Ohb7XnZZCF+RPiefn9+Ikg+58s4=
+		7wsv2vD7GRi8FrmEEpNiIcUgjLw=
 		</data>
 		<key>www/js/app.js</key>
 		<data>
-		GrrxgFnv0A9A936WzfKMweTb0Xc=
+		SVnRRarLognEuMOXeQfjenwtMn8=
 		</data>
 		<key>www/js/controllers/authentication.js</key>
 		<data>
@@ -334,15 +334,15 @@
 		</data>
 		<key>www/js/controllers/evaluations.js</key>
 		<data>
-		HxiMO0s82cewGTNEpVwtOnjgr20=
+		g+rBjpATO0vUFlXoi/amL2ONqPs=
 		</data>
 		<key>www/js/controllers/feedbackMessage.js</key>
 		<data>
-		1PSS1LpykD8feiDgv/v85EFktJk=
+		Uk7o2WXGjegxjpPJ/nhu97Y1GiE=
 		</data>
 		<key>www/js/controllers/feedbacks.js</key>
 		<data>
-		d1c10Mazzk+YlcWUqugtQQ3yJ+Q=
+		Egv4FBJF/ppOf42PCdjfEqCGj5s=
 		</data>
 		<key>www/js/controllers/group.js</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>www/js/controllers/groupParticipants.js</key>
 		<data>
-		K58hLnJf2gJQSJSxnMdybP5Xzeg=
+		CB6JmUp+UfJnpUCo29xEaZzcpzM=
 		</data>
 		<key>www/js/controllers/participants.js</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>www/js/controllers/questions.js</key>
 		<data>
-		E3sT+tvay8o5dkuJbVsVPhVgtzg=
+		2VBlhbjbBbAgvCm3LMsd797jlW8=
 		</data>
 		<key>www/js/controllers/ranking.js</key>
 		<data>
@@ -371,6 +371,10 @@
 		<key>www/js/controllers/sidemenu.js</key>
 		<data>
 		j4nh8j4JFeLIoKk3knGkD+v2L3M=
+		</data>
+		<key>www/js/controllers/userConsiderations.js</key>
+		<data>
+		i5BRL7KfKupFVWPcMY1RrzBPSn0=
 		</data>
 		<key>www/js/controllers/workshop.js</key>
 		<data>
@@ -387,6 +391,10 @@
 		<key>www/js/services/authentication.js</key>
 		<data>
 		31KztDevMusqGt5qPoYjMPy/2Wo=
+		</data>
+		<key>www/js/services/considerations.js</key>
+		<data>
+		XBwuaXvZp7d/GdBX/KaRJSsaGVY=
 		</data>
 		<key>www/js/services/curriculum.js</key>
 		<data>
@@ -966,15 +974,15 @@
 		</data>
 		<key>www/templates/detailed-feedbacks.html</key>
 		<data>
-		my12H4BiNVblIC3CfVwqFs1G/UU=
+		HwxUpQWqx46L1dbwNrCihxfLZG4=
 		</data>
 		<key>www/templates/feedbacks.html</key>
 		<data>
-		ka58X9kr52PgMmKu4J7yc7bUNRw=
+		b1D7MayX0iUR74SIaZ59WiOVvAM=
 		</data>
 		<key>www/templates/feedbacksMessages.html</key>
 		<data>
-		HyeyQns+r/yTZfxVV909ESosmZo=
+		eZIVYUSxQaQY5eeQ1l5K+19G7eI=
 		</data>
 		<key>www/templates/form-errors.html</key>
 		<data>
@@ -986,7 +994,7 @@
 		</data>
 		<key>www/templates/groupParticipants.html</key>
 		<data>
-		eul8THqFOVOqdwNWGB0890E/Iro=
+		IyXQkotEjIDUQwpnuLJjFCzWo10=
 		</data>
 		<key>www/templates/groups.html</key>
 		<data>
@@ -1027,6 +1035,10 @@
 		<key>www/templates/ranking.html</key>
 		<data>
 		QLrXvNE3qSZVz79X6/nAefZxlek=
+		</data>
+		<key>www/templates/userConsiderations.html</key>
+		<data>
+		1dEffTDUHIPH+ttcIRtQ6fmVRUw=
 		</data>
 		<key>www/templates/workshop-evaluator.html</key>
 		<data>
@@ -1432,11 +1444,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zCc+2WL4b+WzyOe+tciLikhLNIc=
+			xqnSwx5SXnTle5CsqnaOLjvr8sc=
 			</data>
 			<key>hash2</key>
 			<data>
-			EqJ4YzfQ8QZbXgMa9s6rpgYH+PMPQWvdsA/C++DBgqU=
+			3IZ25FcQYM6ukL6CMogrBmxri9ngoVBKFwPZajicEzc=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -1487,11 +1499,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZhAEF8Mr6hooEKzgUdWZ/9OMj9A=
+			QSxjnzyqs59lz3FUzQENzMn/6kg=
 			</data>
 			<key>hash2</key>
 			<data>
-			b6JgRDlOMjUaXh7VZytGISdKiO1ah1bB3Ph2VEPxPco=
+			Twyp2fdFYy6SEkxLr5tHd/zwG6+6fruWzy9lCMoal2U=
 			</data>
 		</dict>
 		<key>www/img/impulse.png</key>
@@ -1872,22 +1884,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ohb7XnZZCF+RPiefn9+Ikg+58s4=
+			7wsv2vD7GRi8FrmEEpNiIcUgjLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CE/bcuPG5lblzF6bGvmquzO7E7blM30M5zUxegq81n4=
+			qzWB6dg/h7An3Tq4C73vYrxIAoxZ8Z1ucdItv8kz728=
 			</data>
 		</dict>
 		<key>www/js/app.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GrrxgFnv0A9A936WzfKMweTb0Xc=
+			SVnRRarLognEuMOXeQfjenwtMn8=
 			</data>
 			<key>hash2</key>
 			<data>
-			xt0bJzfonlhSWlODCIoZ7Rdt4cS3VS0DvOTPY0JoL2k=
+			1/1jkVCl++W/N9+JhEU4MrIHPuOvWOYLBOOeTMIpVJI=
 			</data>
 		</dict>
 		<key>www/js/controllers/authentication.js</key>
@@ -1927,33 +1939,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HxiMO0s82cewGTNEpVwtOnjgr20=
+			g+rBjpATO0vUFlXoi/amL2ONqPs=
 			</data>
 			<key>hash2</key>
 			<data>
-			HFqDAmzAxX2OANRyQ5tabRlPhAcDSXfSdNSV0Ni13i0=
+			KVEczUELdoVwjRl+5tc7VANwIWEPkwqdGEuZktoxYbo=
 			</data>
 		</dict>
 		<key>www/js/controllers/feedbackMessage.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1PSS1LpykD8feiDgv/v85EFktJk=
+			Uk7o2WXGjegxjpPJ/nhu97Y1GiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5MfmNUh8Ce75ZaH0KFTAvxNpzH/07J4BxlinyinlqTE=
+			aLABUYNND6nrKijN8No2E5rklLkDWghBWDZNlQL/YIM=
 			</data>
 		</dict>
 		<key>www/js/controllers/feedbacks.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d1c10Mazzk+YlcWUqugtQQ3yJ+Q=
+			Egv4FBJF/ppOf42PCdjfEqCGj5s=
 			</data>
 			<key>hash2</key>
 			<data>
-			qMq2JhQEB2eDP37aSYngjsWrbmVzcNNsIKtP7qQjh+Q=
+			CwVKXXud4ECyKaGTode8LVXd0nJLtquUmLhC1ex/eSs=
 			</data>
 		</dict>
 		<key>www/js/controllers/group.js</key>
@@ -1971,11 +1983,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K58hLnJf2gJQSJSxnMdybP5Xzeg=
+			CB6JmUp+UfJnpUCo29xEaZzcpzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			a4nNt6LXZuq2zh2mKibuEVOc+XP9z1DWeyHunUH9+I4=
+			1ohijONuNLgQR4FKd4rp/BRCAtCdaJuH4dOH0w0lhco=
 			</data>
 		</dict>
 		<key>www/js/controllers/participants.js</key>
@@ -1993,11 +2005,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E3sT+tvay8o5dkuJbVsVPhVgtzg=
+			2VBlhbjbBbAgvCm3LMsd797jlW8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q8txflESp6y0JMpi1HZUXDyBT3rQCIrWlxkqVip2Pi4=
+			Mx1fMDGSgVNq/za2nA7NXPsQ20gdGs409Mf1ExYcQxU=
 			</data>
 		</dict>
 		<key>www/js/controllers/ranking.js</key>
@@ -2031,6 +2043,17 @@
 			<key>hash2</key>
 			<data>
 			Cf3DSq0AH4uEehAVrBQCP+uZn7Lbng77LFgeZWyJ24U=
+			</data>
+		</dict>
+		<key>www/js/controllers/userConsiderations.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i5BRL7KfKupFVWPcMY1RrzBPSn0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Cvy+Z/lRKm0EDlYBF0ojANvC9OXpvYVOMgWvJxzNkNA=
 			</data>
 		</dict>
 		<key>www/js/controllers/workshop.js</key>
@@ -2075,6 +2098,17 @@
 			<key>hash2</key>
 			<data>
 			K7Mo+PbLXLp7UyC8P+3jznXR0zLr+I1DpojDB0pKrsU=
+			</data>
+		</dict>
+		<key>www/js/services/considerations.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XBwuaXvZp7d/GdBX/KaRJSsaGVY=
+			</data>
+			<key>hash2</key>
+			<data>
+			cDa53QVmZ37Z8abiTv8p+UXdOWvlCT3IuFwVtDfN++I=
 			</data>
 		</dict>
 		<key>www/js/services/curriculum.js</key>
@@ -3665,33 +3699,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			my12H4BiNVblIC3CfVwqFs1G/UU=
+			HwxUpQWqx46L1dbwNrCihxfLZG4=
 			</data>
 			<key>hash2</key>
 			<data>
-			bmLP9xdVR6SmG3d+nSUrVdx9AfSFTyvg7SOZLWKaqYg=
+			zYqtrC+YvM4mTA+r/wSCxgmvXbmKqSZpHlmW2cJuv2E=
 			</data>
 		</dict>
 		<key>www/templates/feedbacks.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ka58X9kr52PgMmKu4J7yc7bUNRw=
+			b1D7MayX0iUR74SIaZ59WiOVvAM=
 			</data>
 			<key>hash2</key>
 			<data>
-			nYGQExR6Wut8cs3kDgO0uLIns4HuyMoUohtt7h9jgyA=
+			RM7cGvZSdisnsuan+wUwVmGkb5Q463RM5gldb8mOiWA=
 			</data>
 		</dict>
 		<key>www/templates/feedbacksMessages.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HyeyQns+r/yTZfxVV909ESosmZo=
+			eZIVYUSxQaQY5eeQ1l5K+19G7eI=
 			</data>
 			<key>hash2</key>
 			<data>
-			6D8w/rUVRUytDqY3lzosmPAkYQkILEQgUEtXU0jpjRM=
+			oDW95dz139R+8di4Kecs03i0zEVYTaKwv9Es/VRZ2Io=
 			</data>
 		</dict>
 		<key>www/templates/form-errors.html</key>
@@ -3720,11 +3754,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eul8THqFOVOqdwNWGB0890E/Iro=
+			IyXQkotEjIDUQwpnuLJjFCzWo10=
 			</data>
 			<key>hash2</key>
 			<data>
-			F9tTZLj7xQwya4oKfFT+U39MqTNamawVV9WUjoqICXM=
+			N3sWjoMzHzlSZr+853UPGFuFvruWgPiUTKS6Y++JMFo=
 			</data>
 		</dict>
 		<key>www/templates/groups.html</key>
@@ -3835,6 +3869,17 @@
 			<key>hash2</key>
 			<data>
 			WwnSwgSQewIQQ2YrwIXjFIHZmgaw+IfUtQrr9Gwcm44=
+			</data>
+		</dict>
+		<key>www/templates/userConsiderations.html</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1dEffTDUHIPH+ttcIRtQ6fmVRUw=
+			</data>
+			<key>hash2</key>
+			<data>
+			jXCWGURuLy5UtotEKj9DfK+qE1VYj4tcfPYxYPO1RxQ=
 			</data>
 		</dict>
 		<key>www/templates/workshop-evaluator.html</key>

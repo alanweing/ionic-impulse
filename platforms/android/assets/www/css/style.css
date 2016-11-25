@@ -356,6 +356,8 @@
   background: #FFF;
   margin: 20px 20px 30px 50px;
   padding-bottom: 30px;
+  display: inline-block;
+  width: 85%;
 
 }
 
@@ -886,5 +888,114 @@
 .evaluation-table td {
 
   text-align: center;
+
+}
+
+.full-button {
+  background: #41CF9A;
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+  margin: 30px 20px 20px 20px;
+  font-size: 10vw;
+}
+
+.half-button {
+
+  float: left;
+  width: 40%;
+  color: #FFF;
+  padding: 1%;
+  text-align: center;
+  margin: -7px 2% 8px 2%;
+  font-size: 10vw;
+  height: 100%;
+
+}
+
+.group-participants-header {
+  display: block;
+  margin: 10px 0 20px 0;
+  border-radius: 5px;
+}
+
+.group-participants-header i {
+  display: block;
+  color: #FFF;
+  padding: 5px;
+  margin: -10px 0;
+  text-align: center;
+}
+
+.considerations-wrapper {
+
+  margin: 20px;
+
+}
+
+.consideration-card {
+
+  border: 1px solid #E4E4E4;
+  display: block;
+  margin-bottom: 20px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 2px 2px 15px #333;
+
+}
+
+.consideration-card h2 {
+
+  padding: 20px 10px;
+  background: #FFC107;
+  color: #FFF;
+  font-size: 5vw;
+  font-weight: 400;
+
+}
+
+.consideration-card h6 {
+
+  float: left;
+  background: #E4E4E4;
+  color: #5C5C5C;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 3px 2px;
+
+}
+
+.consideration-card h4 {
+
+  color: #9E9E9E;
+  font-size: 4vw;
+  margin: 20px 0;
+  padding: 0 10px;
+
+}
+
+.consideration-card button {
+
+  background: #388E3C;
+  border: 1px solid #388E3C;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  border-radius: 2px;
+  font-weight: 200;
+  width: 100%;
+
+
+}
+
+.consideration-card input {
+
+  font-weight: 200;
+  background: #EEE;
+  color: #5C5C5C;
+  width: 98%;
+  margin: 10px 1%;
+  padding: 10px;
+  border: 1px solid #5C5C5C;
 
 }

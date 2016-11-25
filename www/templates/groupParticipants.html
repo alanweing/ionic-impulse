@@ -2,27 +2,37 @@
   <ion-nav-title></ion-nav-title>
   <ion-content style="background: {{ group.group.color }}">
 
-    <style>
-      .full-button {
-        background: #41CF9A;
-        color: #FFF;
-        padding: 10px;
-        text-align: center;
-        margin: 30px 20px 20px 20px;
-        font-size: 10vw;
-      }
-    </style>
+    <div class="group-participants-header">
+      <i class="icon ion-ios-chatbubble" style="background:#41CD9A;">
+         Feedbacks
+      </i>
+      <br>
+      <i class="icon ion-edit" style="background:#2196F3;">
+         Considerações (não podem ser visualizadas pelo participante)
+      </i>
+    </div>
 
     <div>
       <div class="participant-card"
            ng-repeat="participant in group.users"
            style="padding-bottom: 1px">
         <img ng-src="{{ getProfilePictureUrl(participant.image) }}">
-        <h2 class="block-text" style="padding-bottom: 0">{{ participant.name }}</h2>
-        <div class="full-button"
-             ng-click="addFeedbackToUser(participant.id)">
-          <i class="icon ion-ios-chatbubble"></i>
+        <h2 class="block-text" style="padding-bottom: 0;padding-top: 5px">{{ participant.name }}</h2>
+        <span style="display: block; clear: both"></span>
+        <div style="width: 100%;margin: 0 5%">
+          <div class="half-button"
+               style="background: #41CF9A;"
+               ng-click="addFeedbackToUser(participant.id)">
+            <i class="icon ion-ios-chatbubble"></i>
+          </div>
+          <div class="half-button"
+               style="background:#2196F3"
+               ng-click="goToConsiderations(participant)">
+            <i class="icon ion-edit"></i>
+          </div>
         </div>
+
+
       </div>
     </div>
 

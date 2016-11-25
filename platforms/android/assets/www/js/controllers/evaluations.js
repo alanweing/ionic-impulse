@@ -12,7 +12,7 @@ app.controller('EvaluationsController', function ($scope, ApiService, $ionicLoad
       .then(function (response)
     {
       $scope.evaluations = response;
-      console.log(response);
+      // console.log(response);
     })
       .finally(function ()
       {

@@ -134,9 +134,14 @@ app.config(function ($stateProvider, $urlRouterProvider)
       controller: 'FeedbackMessageController'
     })
     .state('groupParticipants', {
-      url: 'groupParticipants',
+      url: '/groupParticipants',
       templateUrl: 'templates/groupParticipants.html',
       controller: 'GroupParticipantsController'
+    })
+    .state('considerations', {
+      url: '/considerations',
+      templateUrl: 'templates/userConsiderations.html',
+      controller: 'UserConsiderationsController'
     });
 
   $urlRouterProvider.otherwise('/login');
@@ -144,8 +149,8 @@ app.config(function ($stateProvider, $urlRouterProvider)
 });
 
 app.constant('globals', {
-  'siteUrl': 'http://impulsecareers.com.br/',
-  'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
-  // 'siteUrl': 'http://localhost:8000/',
-  // 'apiUrl': 'http://localhost:8000/impulse_api/'
+  // 'siteUrl': 'http://impulsecareers.com.br/',
+  // 'apiUrl': 'http://impulsecareers.com.br/impulse_api/'
+  'siteUrl': 'http://localhost:8000/',
+  'apiUrl': 'http://localhost:8000/impulse_api/'
 });
